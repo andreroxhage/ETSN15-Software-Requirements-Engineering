@@ -11,19 +11,19 @@
    - **Product Description:** EasyTrip is a comprehensive travel planning tool designed to help travelser find, visualize, and track their trips efficiently. It aims to improve customer satisfaction by providing a comprehensive comparison of flight prices based on different geographic areas.
 
 3. - **User Roles:**
-     - **Primary:** Travelers aging from 18-65 y/o.
-     - **Secondary:** Family members & friends to to whom booked the trip.
-     - **Tertiary:** Travel angencies.
+   - **Primary:** Travelers aging from 18-65 y/o.
+   - **Secondary:** Family members & friends to to whom booked the trip.
+   - **Tertiary:** Travel angencies.
 
 4. - **Team Roles:**
-     - **Project Manager:** Felix Sundholm - Project, Process, Prioritization & Release Manager
-     - **Stakeholder Manager:** Ossian Gewert
-     - **Elicitation Manager:** André Roxhage - Elicitation & Prototyping Manager
-     - **Quality Reqirements Manager:** Simon Jacobsson Persson - Quality Requirements Manager
-     - **Data Reqirements Manager:** Jacob Jönsson
-     - **Validation Manager:** Jonathan Ahlström
-     - **Client:** Views project progress and provides feedback on deliverables.
-     - **Tools, Documents, experiences and version manager:** All - Tools, Documents, Experiences & Version Manager
+   - **Project Manager:** Felix Sundholm - Project, Process, Prioritization & Release Manager
+   - **Stakeholder Manager:** Ossian Gewert
+   - **Elicitation Manager:** André Roxhage - Elicitation & Prototyping Manager
+   - **Quality Reqirements Manager:** Simon Jacobsson Persson - Quality Requirements Manager
+   - **Data Reqirements Manager:** Jacob Jönsson
+   - **Validation Manager:** Jonathan Ahlström
+   - **Client:** Views project progress and provides feedback on deliverables.
+   - **Tools, Documents, experiences and version manager:** All - Tools, Documents, Experiences & Version Manager
 
 5. A brief description of some external system with which your product interacts.
    - **External Systems:**
