@@ -91,3 +91,15 @@
   - Heatmap to enhanced interactive comparision of prices based on geography. For example by integrating Google Maps API together with flight information from Airlines' APIs.
   - Fast and intuitive user interface
   - Accesible for all user groups. For example, achieved by comprehensive usability evaluations
+
+| **Activity**                   | **Deliverable**         | **Start Date** | **End Date** | **Estimated Hours** | **Responsible Members**      |
+| ------------------------------ | ----------------------- | -------------- | ------------ | ------------------- | ---------------------------- |
+| Finalize project mission draft | Project Mission v1      | Jan 20, 2025   | Jan 22, 2025 | 6 hours             | All team members             |
+| Revise project mission         | Project Mission v2      | Jan 27, 2025   | Jan 28, 2025 | 6 hours             | PM, SM, TM                   |
+| Develop first iteration        | Release R1              | Jan 29, 2025   | Feb 2, 2025  | 14 hours            | All members                  |
+| Conduct validation planning    | Validation Checklist    | Feb 10, 2025   | Feb 14, 2025 | 5 hours             | QM, VM                       |
+| Continue development           | Release R2              | Feb 3, 2025    | Feb 16, 2025 | 19 hours            | All members                  |
+| Perform validations and report | Validation Report       | Feb 10, 2025   | Feb 20, 2025 | 10 hours            | All members, with QM/VM lead |
+| Final iteration                | Release R3              | Feb 17, 2025   | Mar 1, 2025  | 20 hours            | All members                  |
+| Prepare presentation           | Conference Presentation | Feb 28, 2025   | Mar 2, 2025  | 5 hours             | EM, SM                       |
+| Prepare discussant questions   | Discussant Questions    | Mar 1, 2025    | Mar 3, 2025  | 3 hours             | All members                  |
