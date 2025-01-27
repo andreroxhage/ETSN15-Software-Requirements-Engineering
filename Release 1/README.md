@@ -65,7 +65,7 @@
 
 2. **System Interactions**:
 
-   - **Trip Planning Integration**: Sync with external travel agencies (e.g., SAS, Norwegian) for flight pricing and availability data.
+   - **Flight Price Integration**: Sync with external travel agencies (e.g., SAS, Norwegian) for flight pricing and availability data.
    - **Map Integration**: Use Google Maps to fetch and display geographical data, travel routes, and distances.
 
 3. **Stakeholders**:
