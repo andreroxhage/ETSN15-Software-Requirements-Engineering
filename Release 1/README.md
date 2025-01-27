@@ -10,12 +10,14 @@
 
    - **Product Description:** EasyTrip is a comprehensive travel planning tool designed to help travelser find, visualize, and track their trips efficiently. It aims to improve customer satisfaction by providing a comprehensive comparison of flight prices based on different geographic areas.
 
-3. - **User Roles:**
+3. **User Roles:**
+
    - **Primary:** Travelers aging from 18-65 y/o.
    - **Secondary:** Family members & friends to to whom booked the trip.
    - **Tertiary:** Travel angencies.
 
-4. - **Team Roles:**
+4. **Team Roles:**
+
    - **Project Manager:** Felix Sundholm - Project, Process, Prioritization & Release Manager
    - **Stakeholder Manager:** Ossian Gewert
    - **Elicitation Manager:** André Roxhage - Elicitation & Prototyping Manager
@@ -32,7 +34,9 @@
 
 ---
 
-## Requirement Specification
+## Requirement Specifications for EasyTrip
+
+2024-01-22
 
 **Two-step approach:** Domain-level + design-level
 **Project Type:** Product dev
@@ -40,14 +44,91 @@
 **Context Diagram:**
 ![Context Diagram](resources/contextDiagram.png)
 
-- **Users and Systems:**
-  - **Primary:** Travelers aging from 18-65 y/o.
-  - **Secondary:** Family members & friends to to whom booked the trip.
-  - **Tertiary:** Travel angencies.
-- **Non-obvious Actors:** Support department (Customer Experience)
-- **Stakeholders:** Competitors like Momondo and Flight Scanner, Travel agencies, Ad creators, End users (travelers), product management, development team, airline
+### **Goal-Level Requirements**
 
-### Requirements:\*\* b. Outline a possible requirement for each of the four requirements levels (kap 1.6, goal, domain, etc.)
+1. **Purpose**: Provide an easy-to-use travel planning tool that enhances customer satisfaction by comparing flight prices efficiently across different geographic areas.
+2. **Business Goals**:
+   - Increase market share by competing with established platforms like Momondo and Flight Scanner.
+   - Generate revenue through partnerships with travel agencies and ad placements.
+   - Build a user base of travelers who trust the platform for accurate price comparisons.
+
+---
+
+### **Domain-Level Requirements**
+
+1. **User Roles**:
+
+   - **Primary Users**: Travelers aged 18-65, using the platform to plan trips.
+   - **Secondary Users**: Family and friends involved in the traveler’s plans.
+   - **Tertiary Users**: Travel agencies providing data and bookings.
+   - **Non-Obvious Actors**: Customer experience support teams ensuring user satisfaction.
+
+2. **System Interactions**:
+
+   - **Trip Planning Integration**: Sync with external travel agencies (e.g., SAS, Norwegian) for flight pricing and availability data.
+   - **Map Integration**: Use Google Maps to fetch and display geographical data, travel routes, and distances.
+
+3. **Stakeholders**:
+   - Competitors like Momondo and Flight Scanner.
+   - Travel agencies providing data partnerships.
+   - End users (travelers) providing feedback.
+   - Product management and development teams.
+   - Airline companies indirectly benefitting from bookings.
+   - **Non-obvious Actors:** Support department (Customer Experience)
+
+---
+
+### **Product-Level Requirements**
+
+1. **Functional Requirements**:
+
+   - Display a comparison of flight prices across destinations.
+   - Provide trip visualization with an interactive map powered by Google Maps.
+   - Allow users to save and track planned trips.
+   - Enable data retrieval from multiple travel agencies for real-time availability and pricing.
+
+2. **Data Requirements**:
+
+   - Store user account details securely (e.g., name, email, trip preferences).
+   - Maintain a database of flight prices and travel agency offerings.
+   - Record geographical data for trip planning (distances, locations).
+
+3. **Quality Requirements**:
+
+   - Ensure system uptime of 99.9% for seamless access.
+   - Offer response times under 2 seconds for search queries.
+   - Provide a visually appealing and intuitive interface.
+
+4. **Managerial Requirements**:
+   - Deliver an MVP (Minimum Viable Product) by the set project deadline.
+   - Collaborate with stakeholders to refine features iteratively.
+
+---
+
+### **Design-Level Requirements**
+
+1. **User Interface**:
+
+   - Interactive map to visualize destinations and prices.
+   - Dynamic filter and sort functionality
+
+2. **System Interfaces**:
+
+   - API integration with travel agencies to fetch real-time data.
+   - Google Maps API for visualizing travel routes and distances.
+
+3. **Non-Functional Requirements**:
+
+   - Mobile-first design to cater to travelers on the go.
+   - Multilingual support for global users.
+   - Scalable backend to exponential growth of user base.
+
+4. **Validation Requirements**:
+   - Regular user testing sessions with travelers.
+   - Integration testing with external APIs (e.g., SAS, Norwegian, Google Maps).
+   - Feedback loops with clients and stakeholders to validate deliverables.
+
+### b. Outline a possible requirement for each of the four requirements levels (kap 1.6, goal, domain, etc.)
 
 - **Goal Level Requirement:** Generate revenue through referral links, advertisements, and partnerships with transportation providers.
 - **Domain Level Requirement:** Help customers to find cheap travel tickets
@@ -60,4 +141,3 @@
   - Heatmap to enhanced interactive comparision of prices based on geography. For example by integrating Google Maps API together with flight information from Airlines' APIs.
   - Fast and intuitive user interface
   - Accesible for all user groups. For example, achieved by comprehensive usability evaluations
--
