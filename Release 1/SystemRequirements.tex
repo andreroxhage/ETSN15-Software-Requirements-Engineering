@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{graphicx}
+
+\title{System Requirements}
+\author{André, Jonathan, Ossian, Jacob, Simon Persson}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+System Requirements include the following:
+% System Requirements include the following:
+% (a) Different types of system requirements, e.g. data, function, quality
+% at different levels, e.g. goal, domain, product, design.
+% (b) Several specification techniques, e.g. context diagrams, features,
+% virtual windows, task descriptions.
+% (c) Each requirement should have a unique identity (name or number). FQ1, Q1, D1,
+% (d) A Release Plan should be part of R2 & R3, in which a subset of the
+% requirements are prioritized and planned to be implemented in three
+% imagined future product releases called R4, R5, R6.
+% (e) Design-level requirements should be specified for the sub-set of requirements that are planned for a future imagined product release R4 - Jonathan & André
+% (see 6e). This sub-set of requirements shall be implemented as mockup designs in R3 using, e.g. screens and prototypes, analog drawings, clickable presentations, executable GUI mockups or similar
+
+\section{Elicitation}
+% Jonathan & André
+% Describe the elicitation process, what went well, what could have been done better. Interview, 1-2 persons, inteview guide, semistructural interview. Then summarize the results in the elixitaion.tex.
+\input{elicitation.tex}
+
+\section{Functional Requirements}
+% Ossian
+% Describe what the system does, i.e., the services it provides to the users.
+\input{functionalRequirements.tex}
+
+\section{Data / Non-Functional Requirements}
+% Jacob & Felix
+% Details about the data the system will handle, API's etc, data structure and aggregations
+\input{dataRequirements.tex}
+
+\section{Quality Requirements}
+% Simon Persson
+% Describe the quality attributes of the system, such as performance, usability, etc.
+\input{qualityRequirements.tex}
+
+\section{Context Diagram}
+% André can update this if needed
+% Explanation of diagram and its components
+\includegraphics[width=\textwidth]{contextDiagram.png}
+
+\section{Mockups}
+% André & Jonathan
+% Figma wireframes or lofi prototypes
+\includegraphics[width=\textwidth]{mockups/mockup1.png}
+
+\end{document}
