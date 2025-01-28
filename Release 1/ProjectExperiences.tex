@@ -1,6 +1,39 @@
-%main latex???
-...
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=3cm]{geometry}
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+\usepackage{parskip}
+% \usepackage{csquotes}
+% \usepackage[hyperref,backend=biber,style=ieee,isbn=true,urldate=iso8601]{biblatex}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+% \usepackage{listings}
+\usepackage{graphicx}
 
+%% Hyperref options
+\makeatletter
+\hypersetup{
+    linktoc=all,
+    unicode=true,
+    pdfcreator=,
+    pdftitle={\@title},
+    pdfauthor={\@author},
+    pdfdisplaydoctitle=true,
+}
+
+\title{Project Experiences}
+\author{Jonathan Ahlström \and Ossian Gewert \and Jacob Jönsson \and Simon Persson \and André Roxhage \and Felix Sundholm}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+    \input{../group_info}
+\end{center}
+
+\tableofcontents
 
 % (a) Description of your requirements engineering work, including experiences and reflections in relation to learning objectives.
 % (b) Description of the chosen methods/techniques for elicitation, specification, validation, and prioritization.
@@ -30,3 +63,5 @@ specificationReflection.tex
 % Initial Challenges Reflection:
 % Reflection on the initial challenges faced, what went well, what could have been done better
 initialChallengesReflection.tex
+
+\end{document}
