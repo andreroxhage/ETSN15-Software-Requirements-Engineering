@@ -1,13 +1,39 @@
-\documentclass{article}
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=3cm]{geometry}
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+\usepackage{parskip}
+% \usepackage{csquotes}
+% \usepackage[hyperref,backend=biber,style=ieee,isbn=true,urldate=iso8601]{biblatex}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+% \usepackage{listings}
 \usepackage{graphicx}
 
+%% Hyperref options
+\makeatletter
+\hypersetup{
+    linktoc=all,
+    unicode=true,
+    pdfcreator=,
+    pdftitle={\@title},
+    pdfauthor={\@author},
+    pdfdisplaydoctitle=true,
+}
+
 \title{System Requirements}
-\author{André, Jonathan, Ossian, Jacob, Simon Persson}
-\date{\today}
+\author{Jonathan Ahlström \and Ossian Gewert \and Jacob Jönsson \and Simon Persson \and André Roxhage \and Felix Sundholm}
 
 \begin{document}
-
 \maketitle
+
+\begin{center}
+    \input{../group_info}
+\end{center}
+
+\tableofcontents
 
 \section{Introduction}
 System Requirements include the following:
@@ -46,11 +72,11 @@ System Requirements include the following:
 \section{Context Diagram}
 % André can update this if needed
 % Explanation of diagram and its components
-\includegraphics[width=\textwidth]{contextDiagram.png}
+\includegraphics[width=.99\textwidth]{resources/contextDiagram.png}
 
 \section{Mockups}
 % André & Jonathan
 % Figma wireframes or lofi prototypes
-\includegraphics[width=\textwidth]{mockups/mockup1.png}
+\includegraphics[width=.99\textwidth]{mockups/mockup1.png}
 
 \end{document}
