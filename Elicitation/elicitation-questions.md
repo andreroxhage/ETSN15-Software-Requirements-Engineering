@@ -22,7 +22,7 @@ Hello! We are developing a product called EasyTrip used for comparing flight pri
 
 ## Experience with Existing Travel Planning Tools
 
-1. How do you know choose where to travel when deciding for a holiday?
+1. How do you know where to travel when deciding for a holiday?
 2. How important is the price of the transportation when deciding where to go? on a scale [0,10]
 3. Are there any methods for finding cheap destinations?
 4. Which flight comparison websites or apps have you used? (e.g., Momondo, Google Flights, Skyscanner)
