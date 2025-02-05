@@ -9,6 +9,7 @@ The participants (N=2) had an average age of 24 years and both had experience wi
 
 \subsection{Prototype feedback}
 Purpose: Test and validate an inital design of the system, to gather feedback on the traveller interface and functionality.
+Scenario: The participants have a low budget and really feel an urge to travel. They are looking for a cheap flight to a sunny destination in Europe. They have a flexible schedule and are open to suggestions. They are looking for a platform that can provide them with the best deals and recommendations based on their preferences.
 
 \subsection{Stakeholder Analysis}
 Our stakeholders include competitors such as Momondo and Flight Scanner, travel agencies providing data partnerships, airline companies indirectly benefiting from bookings, end travellers, travelers, providing feedback, IT maintenance and development teams, and non-obvious actors such as the support department. Each stakeholder have different needs and goals, and it is important to understand these in order to create a successful product as well as to manage the relationships and expectations of the stakeholders.
@@ -65,36 +66,63 @@ The IT support team faces risks such as system downtime, and technical issues th
 \subsubsubsection{Solutions and Resources}
 To mitigate these risks, the IT support team will implement robust monitoring and alerting systems to detect and address issues promptly. Regular updates and maintenance schedules will be established to ensure system stability. Collaboration with airlines and travel agencies will be maintained to stay informed about API changes and updates. Additionally, the team will conduct regular data quality checks and validation processes to ensure the accuracy and reliability of the information presented on the platform.
 
-\subsubsection{Competitors - Momondo, Flight Scanner - TOOO DOOO 💩}
+\subsubsection{Competitors - Momondo, Flight Scanner}
 \subsubsubsection{Information Needed}
-Write this!!! Using the bullet poitnts isch 🤓
-\begin{itemize}
-    \item \textbf{User Experience Feedback:} Gather reviews and feedback from users of competitor platforms to identify common pain points and areas for improvement.
-    \item \textbf{Feature Comparison:} Compare the features offered by competitors, such as search filters, booking options, and user interface design, to identify gaps and opportunities for innovation.
-    \item \textbf{Pricing Models:} Understand the pricing strategies and commission structures of competitors to ensure competitive pricing and better deals for travellers.
-    \item \textbf{Market Positioning:} Analyze how competitors position themselves in the market, including their marketing strategies and target demographics, to identify potential niches or underserved segments.
-    \item \textbf{Technical Performance:} Evaluate the technical performance of competitor platforms, including website speed, mobile app functionality, and API reliability, to ensure EasyTrip offers a superior technical experience.
-    \item \textbf{Customer Support:} Assess the quality and availability of customer support provided by competitors to identify areas where EasyTrip can offer better service.
-\end{itemize}
+EasyTrip needs detailed information about the features, pricing models, and user interfaces of competitors like Momondo and Flight Scanner. Specifically, insights into how they handle flight data aggregation, display recommendations, and optimize search algorithms are critical. Also, understanding their their business model will be important since EasyTrip will have similar revenue streams as the competitors, using affiliate marketing strategies and partnerships with airlines.
 
 \subsubsubsection{Stake in the Platform}
-Simularly to EasyTrip, competitors benefit from increased visibility and bookings through their platform. 
+Competitors may benefit from increased visibility and bookings, similar to EasyTrip. However, their primary stake is competitive, as they aim to attract and retain a larger user base. Their ability to secure exclusive partnerships may impact our access to data and revenue streams. However, since EasyTrip is rather for finder wherer the cheapest flight is, the competition has a different perspective on the market. They are more focused on providing a flight price comparisons for travelers already knowing their destination.
 
 \subsubsubsection{Risks}
-Competitors are heavily reliant on the flight industry, as their services would not generate any income if there were no active flights. Their business model and traveller base are directly tied to the demand for air travel.
+Competitors have several risks to EasyTrip, such as attracting potential travellers with more competitive pricing, better deals, or superior user experience. Established competitors can also secure exclusive data partnerships, limiting EasyTrip’s access to certain deals or flight information. Also, their already established brand loyalty can make it challenging for EasyTrip to gain market shares.
 
 
 \subsubsubsection{Solutions and Resources}
-Competitors have an established role in the industry, providing travellers with alternative platforms for flight comparisons and bookings. 
+To minimize the risks, EasyTrip can focus on differentiating itself through innovative features, such as visualization of flight data. EasyTrip can also emphasize user experience by providing intuitive search tools. Collaboration with smaller travel agencies or airlines could help secure unique offers that competitors may not have access to. EasyTrip can also leverage feedback from users to continuously improve its platform and stay competitive.
+
 
 \subsection{Conflicting Stakeholder Interests}
+The table below explains the key conflicts between stakeholders and possible solutions for resolving them:
+
+
 Make a table with conflicting interests and how to solve them
+| Stakeholders Involved          | Conflicting Interests                                                                 | Potential Solutions                                                                                          |
+|-------------------------------|--------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| Airlines vs. Travel Agencies   | Airlines prefer direct bookings, while travel agencies benefit from combining routes | Negotiate fair partnerships where travel agencies promote airline offers and bundle other services effectively. |
+| Airlines vs. EasyTrip          | Airlines may want preferential treatment in search results                          | Maintain neutrality by implementing a transparent ranking system based on user preferences, not payments.     |
+| Competitors vs. EasyTrip       | Competing for user base and exclusive airline partnerships                          | Differentiate through unique features, personalized services, and feedback-driven innovation.                 |
+| Travellers vs. Airlines        | Travellers want low prices, while airlines focus on maximizing profit                | Implement dynamic pricing with filters to show budget-friendly options alongside premium offers.               |
+| IT Support vs. Airlines/Agencies | API changes by airlines or agencies may cause disruptions                         | Maintain regular communication with API providers and implement fallback mechanisms to reduce downtime.       |
 
-Write a paragrapgh about how to solve them and the stakeholders relationship to each other
+\subsubsection{Resolving Conflicts}
+To resolve conflicts, EasyTrip will establish internal clear and transparent guidelines for collaboration and prioritize creating beneficial agreements for multiple stakeholders. Keeping strong relationships using regular communication with airlines and travel agencies is important, especially due to our dependencies on their data. Feedback from travellers will probably be the greatest prioritization, ensuring user satisfaction without compromising data partnerships. A robust monitoring system will be implemented to manage technical dependencies and reduce the risk of conflicts affecting platform performance.
 
-Also if we dont get access or lose acces a backup plan would be to use FLight scanners api and then solely use ads a revenue stream
-https://developers.skyscanner.net/docs/intro
+\subsubsection{Alternative Data Sources - Flight Scanner API}
+In case of losing access to airline data, EasyTrip will use Flight Scanner API as an alternative data source. Flight Scanner provides similar data on flight prices, availability, and schedules, which could be used as a backup plan. However, this would require a different business model, as Flight Scanner does not provide affiliate marketing strategies. Instead, EasyTrip could rely solely on ads as a revenue stream. This alternative data source could be used as a backup plan in case of disruptions, changes in airline data access and for distribution of risk.
 
 \subsection{Contacted Stakeholders - Competitors & Airlines}
 To futher enhance our stakeholder analysis and gather more information about the stakeholders, both competitors such as Momondo and Flight Scanner, as well as airlines such as SAS and Norwegian and 45 other airlines, were contacted. The purpose of the contact was to gather information about their needs, pricing strategies, and API endpoints. 
-... finish writing this sentence ??? did they replay to us or not etc ... ???
+
+\subsubsection{Elicitation of easyJet}
+EasyJet is a low-cost airline that operates in Europe. The following information was gathered from the contact:
+\subsubsubsection{Challenges Faced by Travellers}
+EasyJet highlighted that while its booking system is designed to be user-friendly, travelers often face difficulties when trying to manage bookings across different platforms such as third party solutions like Travel Agencies. Seamless integration of third-party platforms with airline booking systems is a key challenge that can be improved upon to enhance the user experience.
+
+\subsubsubsection{API Integration & Real-Time Data}
+EasyJet pointed out the importance of API integration that supports real-time updates on flight schedules, prices, and availability. While they did not reveal specific technical details about their API agreements, they recommended that any travel planning tool prioritize accuracy, data privacy, and security. This ensures users have up-to-date information and maintain control over their personal data.
+
+\subsubsubsection{Display Requirements}
+Although easyJet did not provide detailed requirements for how their flights and promotions should be displayed on third-party websites, they underscored the importance of maintaining high data standards and compliance. Platforms like EasyTrip would need to adhere to data usage agreements and provide transparent privacy policies.
+
+\subsubsubsection{Use of Publicly Available Resources}
+Due to prioritization on enhancing user experiences on their own platforms, easyJet was unable to offer a dedicated meeting. Also they were unable to share details about their pricing strategies or data-sharing agreements with our competitors. However, they encouraged us to use publicly available resources on their website for information regarding booking processes, and user services.
+
+\subsubsubsection{Underutilized Features in Flight Comparison Tools}
+Although easyJet did not specify which features they believe are underutilized in current flight comparison systems, they truly emphasized on data accuracy, privacy, and ease of booking management. This suggests that addressing these areas could lead to significant improvements.
+
+\subsubsubsection{Takeaways}
+\begin{enumerate}
+    \item EasyTrip will need to explore API partnerships that prioritize real-time data updates, potentially collaborating with services like Flight Scanner as a backup plan or as the primary data source in the minimal viable product.
+    \item Enhancing seamless management of bookings across platforms could address key pain points identified by easyJet. Excluding booking features could be a strategic decision to avoid direct competition with airlines and to focus on providing a user-friendly flight comparison tool. This resolve the conflict of interest between airlines and EasyTrip.
+    \item Implementing clear data privacy policies and ensuring compliance with third-party agreements will be critical to avoid any data-related issues. This will help build trust with airlines and travelers, and maintain a positive reputation in the industry. The use of cookies and data collection should be transparent and in accordance with GDPR regulations to favor the travellers.
+\end{enumerate}
