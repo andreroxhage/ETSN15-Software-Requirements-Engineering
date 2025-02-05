@@ -1,0 +1,60 @@
+# ETSN15 Kravhantering 25-vt1
+
+## Övning 3 - Prototyping (PROTO1/2), Funktionella krav (Lau:3-5)
+
+### 1. Planera prototyping i ditt projekt (för elicitation och validering) genom att överväga följande aspekter:  
+(Purpose, Prototype Scope, Prototype Media, Prototype Use) [PROTO1].
+
+- **a)** Vad vill du lära dig från prototypingen?  
+- **b)** Vilken typ av prototyp behövs?  
+- **c)** Hur ska denna prototyp användas för att få dessa insikter?  
+  - Med vem?
+  - Vilken granskningsmetod och användningsmiljö?
+
+How the product works
+Validation
+---
+
+### 2. Vilka funktionella stilar användes i följande fall? [Lau övn 3.2]
+- **Danish Shipyard:** Kap 5.2.1.1.1, Kap 5.4, Kap 5.2.4, Fig 11.1, Fig 11.10  
+- **Bruel & Kjaer:** R-4  
+- **Tax Payers:** R2, R3  
+
+*Hitta gärna fler egna exempel på kravtyper i specifikationerna!*
+
+---
+
+### 3. För ditt projekt (eller Ticket Machine, sida 543) [Lau övn 3.7]
+- **b)** Skriv uppgiftsbeskrivningar (Kap 3.6) för två till tre användaruppgifter.  
+  - Om lämpligt, skriv *Tasks & Support* (Kap 3.8) snarare än enkla uppgiftsbeskrivningar.
+- **e)** Skapa ett dataflödesdiagram för en del av systemet (välj en lämplig nivå).  
+  - Diskutera skillnaderna mellan dataflödesdiagrammet och uppgiftsbeskrivningen.
+- **f)** Vilka funktionella kravstilar skulle du föreslå att använda i detta fall, för varje kravnivå?  
+  - Överväg alla stilar i kapitel 3 (+2, 4), inte bara de du använde ovan.
+
+> **OBS:** Om du redan har utkast till krav, arbeta med dessa. Överväg hur de kan specificeras med andra tekniker.
+
+---
+
+### 4. För ditt projekt:  
+Nu när din förståelse för domänen och produkten har ökat, uppdatera ditt **kontextdiagram** (Kap 3.2) genom att:
+
+- **a)** Lägga till ytterligare aktörer och interagerande system.  
+- **b)** Identifiera hög-nivå funktioner som flödar mellan din produkt och aktörer samt andra system.  
+  - *(Markera detta på pilarna.)*
+
+---
+
+### 📌 Att göra hemma  
+Jämför **dataflödesdiagram** och **uppgiftsbeskrivningar**, exempelvis baserat på följande faktorer: [Lau övn 3.5]
+
+- Precision av input/output  
+- Precision av funktion  
+- Precision av användaruppgifter  
+- Kundförståelse  
+- Utvecklarförståelse  
+- Problembeskrivning  
+- Designoberoende  
+- Verifiering  
+
+📖 *Se kapitel 3.6 och 3.14*
