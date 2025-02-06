@@ -1,6 +1,28 @@
 \subsection{Data Requirements}
 intro... 
 
+\subsubsection{Data Dictionary}
+
+Class: User
+The user is a Traveller or Travel Agency who has a user account in the product.
+
+Examples:
+1. A traveller who has a user account.
+2. A travel agency who uses their user account to search flights.
+
+Attributes:
+email:      Text, 320 chars
+            The user's email address. This email address is used for communication with the user outside the product.
+
+name:       Text, 50 chars
+            The name of the traveller or travel agency using the account.
+
+newsletter: Boolean
+            Wether the user wants mass email's from the product or not.
+
+city:       Text, 35 chars
+            The city the user's default origin is set to. This is the standard origin used when performing searches for the user.
+
 \subsection{Virtual window}
 Create a virtual window that shows the data that is to be displayed in the system. 
 
