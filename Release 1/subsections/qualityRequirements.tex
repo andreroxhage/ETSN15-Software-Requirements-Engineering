@@ -1,3 +1,78 @@
 \subsection{Quality Requirements}
-intro etc
+\usepackage{longtable}
+\usepackage{xcolor, colortbl}
+
+\begin{document}
+
+\renewcommand{\arraystretch}{1.3} % Adjust row height
+\definecolor{lightgray}{gray}{0.9} % Define header color
+
+\begin{longtable}{|c|c|p{4.5cm}|p{3.5cm}|p{3.5cm}|}
+    \hline
+    \rowcolor{lightgray} \textbf{FR ID} & \textbf{QR ID} & \textbf{Description} & \textbf{Measurement} & \textbf{Why} \\
+    \hline
+    \endfirsthead
+
+    \multicolumn{5}{c}{\textit{(Continued from previous page)}} \\
+    \hline
+    \rowcolor{lightgray} \textbf{FR ID} & \textbf{QR ID} & \textbf{Description} & \textbf{Measurement} & \textbf{Why} \\
+    \hline
+    \endhead
+
+    \hline
+    \multicolumn{5}{r}{\textit{Continued on next page}} \\
+    \endfoot
+
+    \hline
+    \endlastfoot
+
+    F1-G & Q1-P & Search results should be displayed within 2 seconds for a standard query. & Tested by generating random inputs and measuring response time using automated performance testing tools, logging response times for 1000+ random queries. & If too slow, users may switch to competitors. \\
+    \hline
+    F2-D & Q2-D & The system should support flexible date ranges spanning at least 30 days for price comparisons. & Test by selecting a range of 30-60 days, verifying the system returns results across all days without errors. & To be added \\
+    \hline
+    F3-D & Q3-D & Location detection should be completed in under 3 seconds with at least 95\% accuracy. & Use GPS data from 50 ore more test cases across different devices and measure accuracy based on expected vs. detected locations. & To be added \\
+    \hline
+    F4-D & Q4-P & The system should retrieve and display flight prices within 2 seconds for a standard query. & Execute automated tests simulating 1000+ searches and log the response time until results are fully rendered. Primarily same as Q1-P & To be added \\
+    \hline
+    F5-P & Q5-P & The list should support sorting by price, duration, and airline, with sorting applied in under 1 second. & Use UI performance tests to time sorting actions on datasets of varying sizes for example destinations with a lot of flights or destinations with less flights. & To be added \\
+    \hline
+    F6-P & Q6-P & The system should allow searching for up to 10 passengers simultaneously without affecting response time. & Compare response times of searches with 1 vs. 10 passengers under normal and peak loads. & To be added \\
+    \hline
+    F7-P & Q7-D & The heatmap should update dynamically within 3 seconds of data input or changes. & Time updates after input changes for example destination, price range or starting point across different devices.  & To be added \\
+    \hline
+    F8-D & Q8-D & The map should reflect date changes in under 2 seconds without requiring a full reload. & Monitor UI logs to confirm rendering completion time after date modifications. & To be added \\
+    \hline
+    F9-P & Q9-P & Destination lists should be updated in real-time when new flight deals become available. & Insert a new deal in the back-end or get deal from airlines API and verify update propagation within milliseconds. & To be added \\
+    \hline
+    F10-P & Q10-P & Clicking a flight should navigate to the booking page within 1 second and fill in relevant details from users account. & Use automated UI testing to time redirection and fill in data according to users account. & To be added \\
+    \hline
+    F11-P & Q11-P & Selected airports should be highlighted instantly and search results updated in under 2 seconds. & Measure UI update times via browser dev tools or performance logs. & To be added \\
+    \hline
+    F12-P & Q12-P & The system should retrieve multi-flight prices in less than 5 seconds, considering layovers and airlines. & Run tests for complex multi-leg searches, logging response times for different scenarios. & To be added \\
+    \hline
+    F13-G & Q13-G & Travel agency accounts should support handling at least 50 concurrent searches without slowdown. & Simulate 50+ concurrent users with load-testing tools for example JMeter and measure system response time. & To be added \\
+    \hline
+    F14-P & Q14-D & The registration process should take no longer than 15 seconds, including email verification. & Automate user sign-ups and measure time from form submission to receiving the verification email. & To be added \\
+    \hline
+    F15-D & Q15-D & Email verification links should be sent within 5 seconds and expire after 24 hours. & Log email dispatch times in the system and verify expiration behavior after 24 hours. & To be added \\
+    \hline
+    F16-P & Q16-P & Changes to email addresses should be confirmed within 10 seconds via a verification email. & Track the end-to-end time from submission of email change request to email receipt. & To be added \\
+    \hline
+    F17-P & Q17-P & Password changes should be effective immediately and require strong passwords (at least 8 characters, uppercase, lowercase, number, symbol). & Verify enforcement of password complexity rules and Ensure old credentials become invalid instantly post-update. & To be added \\
+    \hline
+    F18-P & Q18-P & Reset emails should be sent within 10 seconds and expire after 30 minutes. & Log email dispatch times and attempt password resets after 30 minutes to confirm expiration. & To be added \\
+    \hline
+    F19-D & Q19-D & Marketing email preferences should be configurable and updated in real-time. & Toggle marketing settings in the Account management section and verify backend logs reflect changes instantly. & To be added \\
+    \hline
+    F20-P & Q20-P & Favorite cities should be stored instantly and retrievable in under 1 second. & Save favorite cities and time retrieval speed via API performance monitoring. & To be added \\
+    \hline
+    F21-G & Q21-G & Reports should be generated in under 10 seconds for a dataset covering the last 6 months. & Execute test report requests and measure query execution and rendering time. & To be added \\
+    \hline
+    F22-P & Q22-P & Marketing emails should be delivered to 95\% of recipients within 1 minute of sending. & Track email delivery timestamps for mass campaigns and compute success rate over time. & To be added \\
+    \hline
+
+\end{longtable}
+
+\end{document}
+
 
