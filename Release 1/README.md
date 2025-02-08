@@ -17,7 +17,7 @@ These are based on are 2 main latex files, which depends on their subpages found
 - Data Requirements
   - Data dictionary
   - Virtual window
-  - UML
+  - E/R diagram
 - Quality Requirements
 - Context Diagram
 

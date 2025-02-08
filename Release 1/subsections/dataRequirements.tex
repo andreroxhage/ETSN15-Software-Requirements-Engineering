@@ -1,5 +1,4 @@
 \subsection{Data Requirements}
-intro... 
 
 \subsubsection{Data Model}
 The design level data requirements are represented through a E/R diagram:
@@ -34,21 +33,24 @@ city:       Text, 35 chars
 Create a virtual window that shows the data that is to be displayed in the system. 
 
 See this example 
-# Traveller #374
 
-## Personal Information
+\begin{longtable}{|p{3cm}|p{9cm}|}
+    \hline
+    \rowcolor{headergray}
+    \textbf{Field} & \textbf{Value} \\ \hline
+    \textbf{Email} & exampleJohn@gmail.com \\ \hline
+    \textbf{Name} & John Doe \\ \hline
+    \textbf{Utskick} & True \hspace{1em} False \\ \hline
+    \textbf{City} & New York \\ \hline
+\end{longtable}
 
-| Field     | Value                   |
-|-----------|-------------------------|
-| **Email** | exampleJohn@gmail.com   |
-| **Name**  | John Doe                |
-| **Utskick** | ● True  ○ False       |
-| **City**  | New York                |
+\vspace{1cm} % Space between tables
 
-## Övervakningar (Monitoring)
-
-| From | Price Max | To  |
-|------|----------|-----|
-| NY   | 3000 SEK | CPH |
-| CPH  | 2500 SEK | NY  |
-| ...  | ...      | ... |
+\begin{longtable}{|p{3cm}|p{3cm}|p{3cm}|}
+    \hline
+    \rowcolor{headergray}
+    \textbf{From} & \textbf{Price Max} & \textbf{To} \\ \hline
+    NY & 3000 SEK & CPH \\ \hline
+    CPH & 2500 SEK & NY \\ \hline
+    ... & ... & ... \\ \hline
+\end{longtable}
