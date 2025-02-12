@@ -45,6 +45,8 @@ no need for multiple airlines, since airlines is in plural.
 
 DONE! Elicitation: email details, how did the contact work, questions asked etc.
 
+DONE! ElicitationReflection: Add subsections
+
 DONE! Add Goal level requirements, "smell of money", before or after the introduction.
 
 #### Function requirements:
@@ -75,7 +77,7 @@ André can add usability requirement SUS scale, score above 50 and WCAG 2.1 stan
 
 #### Other things
 
-Add text description before context diagram, add an id to it. Maybe move it to near intro if we decide to use it as a explaination to the system.
+DONE! Add text description before context diagram, add an id to it. Maybe move it to near intro if we decide to use it as a explaination to the system.
 
 Release plan. Add text before table.
 
