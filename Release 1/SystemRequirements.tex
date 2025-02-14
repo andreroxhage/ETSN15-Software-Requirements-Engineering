@@ -14,6 +14,7 @@
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 % \usepackage{listings}
 \usepackage{graphicx}
+\usepackage{caption}
 
 %% Hyperref options
 \makeatletter
@@ -81,9 +82,18 @@ The system should support features that enable the business to reach new markets
 \section{Mockups}
 % André & Jonathan
 % Figma wireframes or lofi prototypes
-% \includegraphics[width=.99\textwidth]{mockups/mockup1.png}
+\begin{figure}[h]
+\includegraphics[width=1\textwidth]{resources/mockup1.png}
+\caption{User interface showing the search page, dynamic date picker and filters.}
+\end{figure}
 
-% Release  plan
+\begin{figure}[h]
+\includegraphics[width=1\textwidth]{resources/mockup2.png}
+\caption{User interface showing the search results page with a list of flights and a heatmap.}
+\end{figure}
+
+
+
 \section{Release Plan}
 \input{subsections/releasePlan.tex}
 
