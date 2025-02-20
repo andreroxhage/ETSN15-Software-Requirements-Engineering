@@ -1,0 +1,196 @@
+\subsection{Heatmap Visualization}
+\textbf{HeatmapSearch}: Travellers can see destinations with cheap flights on a heatmap.
+    Product-level feature enhancing visualization. See an example in figure 2.
+    \begin{quote}
+        \textbf{HeatmapPerformance}: The heatmap should update dynamically within 3 seconds of data input or changes. \\ \\
+        Monitor UI logs to confirm rendering completion time after date modifications.
+    \end{quote}
+    \begin{quote}
+        \textbf{HeatmapVisibility}: The heatmap should be visible on all devices and screen sizes, while giving a visually appealing representation of data, see figure 1 and 2. Note the examples are only prototypes and are not final.
+    \end{quote}
+\textbf{DateRangeMap}: Travellers can change the dates for which the map shows data. Domain-level control for flight search customization.
+    \begin{quote}
+        \textbf{DateChangeResults}: The map should reflect date changes in under 2 seconds without requiring a full reload. \\ \\
+        Monitor UI logs to confirm rendering completion time after date modifications.
+    \end{quote}
+\begin{quote}
+    \textbf{FlexibleRangeMap}: The system should support flexible date ranges spanning at least 30 days for price comparisons. \\ \\
+    Test by selecting a range of 30-60 days, verifying the system returns results across all days without errors.
+\end{quote}
+\textbf{ListFlightsFromMap}: Travellers can see a text list of destinations with cheap flights shown on map. Product-level display of destinations based on search.
+    \begin{quote}
+        \textbf{TextListsShown}:Destination lists should be updated in real-time when new flight deals become available. \\ \\
+        Insert a new deal in the back-end or get deal from airlines API and verify update propagation within milliseconds.
+    \end{quote}
+\textbf{AirportSelection}: Travellers can select airports from the heatmap. Product-level feature allowing interactive selection.
+\begin{quote}
+    \textbf{FastAirportSelection}: Selected airports should be highlighted instantly and search results updated in under 2 seconds. \\ \\ 
+    Measure UI update times via browser dev tools or performance logs.
+\end{quote}
+
+\subsection{User Security}
+\textbf{...}:... \\ \\
+
+\subsection{Flight Search}
+\textbf{SearchCheapFlights}: Travellers can find destinations with cheap flights when providing a departure city and dates. Goal-level requirement defining a key system function.
+\begin{quote}
+    \textbf{FastSearchResults}: Search results should be displayed within 2 seconds for a standard query.\\ \\ 
+    Tested by generating random inputs and measuring response time using automated performance testing tools, logging response times for 1000+ random queries.
+\end{quote}
+
+\textbf{ListCheapFlights}: Travellers can see a text list of cheap flights to a destination. Product-level feature for displaying search results.
+\begin{quote}
+    \textbf{TextListSupport}: The list should support sorting by price, duration, and airline, with sorting applied in under 1 second.\\ \\ 
+    Use UI performance tests to time sorting actions on datasets of varying sizes for example destinations with a lot of flights or destinations with less flights.
+\end{quote}
+\textbf{SearchCheapDestinations}: Travellers can find cheap flights to a given destination. Domain requirement focusing on the flight search feature.
+\begin{quote}
+    \textbf{FastPriceDisplay}: The system should retrieve and display flight prices within 2 seconds for a standard query.\\ \\
+    Execute automated tests simulating 1000+ searches and log the response time until results are fully rendered. Primarily same as \textit{FastSearchResults}.
+\end{quote}
+\textbf{DateRangeSearch}: Travellers should be able to provide a range of possible dates. Domain-level functionality supporting flexible searches, in flight search feature.
+\begin{quote}
+    \textbf{DateRangeCheck}: The system should support flexible date ranges spanning at least 30 days for price comparisons. \\ \\
+    Test by selecting a range of 30-60 days, verifying the system returns results across all days without errors.
+\end{quote}
+\textbf{GeolocationService}: Travellers can have their device provide their current location. Domain-level feature leveraging geolocation services.
+\begin{quote}
+    \textbf{GeoLocationCheck}:Location detection should be completed in under 3 seconds with at least 95\% accuracy.\\ \\
+    Use GPS data from 50 ore more test cases across different devices and measure accuracy based on expected vs. detected locations.
+\end{quote}
+\textbf{ShowFlights}: Traveller can click through to ticket booking page for shown flights. Product-level requirement enabling ticket purchase.
+    \begin{quote}
+        \textbf{CorrectNavigation}: Clicking a flight should navigate to the booking page within 1 second and fill in relevant details from users account. \\ \\
+        Use automated UI testing to time redirection and fill in data according to users account.
+    \end{quote}
+\textbf{SaveFavoriteCity}:A signed-in traveller can save favorite cities. Product-level feature for personalization.
+\begin{quote}
+    \textbf{FavoriteCityFetching}: Favorite cities should be stored 5 seconds and retrievable in under 1 second. \\ \\
+    Save favorite cities and time retrieval speed via API performance monitoring.
+\end{quote}
+
+\subsection{User Experience}
+\textbf{UsabilityScore}: The ease of use of the product shall be tested and must achieve a System Usability Score (SUS) of at least 70 points, indicating acceptable usability.
+\begin{quote}
+    \textbf{SUSTesting}: Conduct usability tests with a sample group of users and calculate the SUS score. \\ \\
+    Ensure the average score meets or exceeds 70 points.
+\end{quote}
+
+\textbf{AccessibilityCompliance}: The accessibility of the product shall be tested and must comply with WCAG 2.1 standards.
+\begin{quote}
+    \textbf{WCAGTesting}: Perform accessibility audits using automated tools and manual testing to ensure compliance with WCAG 2.1 standards. \\ \\
+    Document and address any issues found during testing.
+\end{quote}
+
+\subsection{Account Management \& Personalization}
+\textbf{AccountCreation}: Travellers should be able to create accounts. Product-level requirement for account management.
+\begin{quote}
+    \textbf{AccountData - Data dictionary}: Product-level requirement: \\\textbf{Class}: User\\
+    The user is a Traveller or Travel Agency who has a user account in the product.
+    
+    \textbf{Examples}:
+    1. A traveller who has a user account.
+    2. A travel agency who uses their user account to search flights.
+    
+    \textbf{Attributes}:
+    \begin{enumerate}
+        \item \textbf{email}:      Text, 320 chars
+        The user's email address. This email address is used for communication with the user outside the product.
+        \item \textbf{name}:       Text, 50 chars
+                The name of the traveller or travel agency using the account.
+        \item \textbf{newsletter}: Boolean
+        Wether the user wants mass email's from the product or not.
+        \item \textbf{city}:       Text, 35 chars
+        The city the user's default origin is set to. This is the standard origin used when performing searches for the user.
+    \end{enumerate}    
+\end{quote}
+
+\begin{quote}
+    \textbf{AccountData - Virtual window}: Product-level requirement described using a data dictionary: \\\textbf{Class}: \begin{longtable}{|p{3cm}|p{9cm}|}
+        \hline
+        \rowcolor{headergray}
+        \textbf{Field} & \textbf{Value} \\ \hline
+        \textbf{Email} & exampleJohn@gmail.com \\ \hline
+        \textbf{Name} & John Doe \\ \hline
+        \textbf{Utskick} & True \hspace{1em} False \\ \hline
+        \textbf{City} & New York \\ \hline
+    \end{longtable}
+\end{quote}
+
+\textbf{EmailConfirmation}: The ownership of travellers' email addresses should be confirmed. Domain requirement ensuring valid accounts.
+    \begin{quote}
+        \textbf{ConfirmationCheck}: Email verification links should be sent within 5 seconds and expire after 24 hours. \\ \\
+        Log email dispatch times in the system and verify expiration behavior after 24 hours.
+    \end{quote}
+\textbf{CreateAccountEmail}: Travellers should be able to create accounts with email addresses and passwords. Productlevel authentication requirement.  
+    \begin{quote}
+        \textbf{}: The registration process should take no longer than 15 seconds, including email verification. \\ \\
+        Automate user sign-ups and measure time from form submission to receiving the verification email.
+    \end{quote}
+\textbf{EmailChange}: Travellers should be able to change their email address. Product-level account management feature.
+\begin{quote}
+    \textbf{EmailChangeConfirmationPerformance}: Changes to email addresses should be confirmed within 10 seconds via a verification email.\\ \\
+    Track the end-to-end time from submission of email change request to email receipt.
+\end{quote}
+\textbf{ChangePassword}:Travellers should be able to change their passwords. Product-level security feature.
+    \begin{quote}
+        \textbf{CheckChangePassword}:Password changes should be effective after 5 seconds and require strong passwords (at least 8 characters, uppercase, lowercase, number, symbol). \\ \\
+        Verify enforcement of password complexity rules and Ensure old credentials become invalid 5 seconds after post-update.
+    \end{quote}
+\textbf{PasswordReset}: Travellers should be able to reset their password if they have forgotten it. Product-level usability requirement.
+\begin{quote}
+    \textbf{FastPasswordReset}: Reset emails should be sent within 10 seconds and expire after 30 minutes. \\ \\
+    Log email dispatch times and attempt password resets after 30 minutes to confirm expiration.
+\end{quote}
+\textbf{MarketingConsent}: Travellers should be asked about receiving marketing emails. Domain-level requirement ensuring compliance with marketing preferences.
+\begin{quote}
+    \textbf{EmailPreferenceCheck}:Marketing email preferences should be configurable and updated in real-time. \\ \\ 
+    Toggle marketing settings in the Account management section and verify backend logs reflect changes 5 seconds.
+\end{quote}
+
+\subsection{System Performance}
+\textbf{StatisticsReport}: Product manager can request a statistics report. Goal-level requirement for system analytics.
+\begin{quote}
+    \textbf{FastStatisticsReport}: Reports should be generated in under 10 seconds for a dataset covering the last 6 months. \\ \\
+    Execute test report requests and measure query execution and rendering time.
+\end{quote}
+\subsubsection{Data Model}
+The design level data requirements are represented through a E/R diagram:
+
+\includegraphics[width=1\textwidth]{resources/dataRelations.PNG}
+
+\subsection{Others}
+
+\textbf{MultipleTicketPrices}: Travellers can see prices for multiple tickets. Product-level requirement enabling comparison of ticket prices.
+\begin{quote}
+    \textbf{FastMultiTicketPrices}: The system should allow searching for up to 10 passengers simultaneously without affecting response time. Test by searching for 10 tickets and verifying that all prices are displayed without errors.\\ \\
+     Compare response times of searches with 1 vs. 10 passengers under normal and peak loads.
+\end{quote}
+\textbf{MultiFlightTrips}: Travellers can find prices of multi-flight trips. Product-level requirement for multi-leg trip pricing. 
+    \begin{quote}
+        \textbf{PriceRetrieval}:The system should retrieve multi-flight prices in less than 5 seconds, considering layovers and airlines. \\ \\ 
+        Run tests for complex multi-leg searches, logging response times for different scenarios.
+    \end{quote}
+\textbf{MarketingChannels}: Marketers can have marketing email sent to relevant consenting travellers. Product-level marketing function.
+\begin{quote}
+    \textbf{CheckMarketing}: Marketing emails should be delivered to 95\% of recipients within 1 minute of sending. \\ \\
+    Track email delivery timestamps for mass campaigns and compute success rate over time.
+\end{quote}
+\textbf{B2BFindFlights}: Travel agencies can find flights on behalf of clients. Goal-level requirement supporting B2B services.
+\begin{quote}
+    \textbf{B2BMulitpleSearch}: Travel agency accounts should support handling at least 50 concurrent searches without slowdown. \\ \\ 
+Simulate 50+ concurrent users with load-testing tools for example JMeter and measure system response time.
+\end{quote}
+
+\newpage
+\begin{figure}[h]
+    \includegraphics[width=.89\textwidth]{resources/mockup1.png}
+    \caption{User interface showing the search page, dynamic date picker and filters.}
+\end{figure}
+
+\begin{figure}[h]
+    \includegraphics[width=.89\textwidth]{resources/mockup2.png}
+    \caption{User interface showing the search results page with a list of flights and a heatmap.}
+\end{figure}
+
+\newpage

@@ -43,7 +43,7 @@
 
 \section{Introduction}
 \subsection{Naming convention}
-The naming convention used for requirements are the following. F1, Q1, D1, is short for Functional, Quality and Data requirements.
+The naming convention used for requirements are descriptive camelCase names for Functional, Quality and Data requirements.
 The overall goal of the system is to provide a platform for users to find cheap flights while driving revenue for the business and gain market share.
 
 \subsection{Context Diagram}
@@ -64,20 +64,9 @@ The system should support features that enable the business to reach new markets
 % Describe the elicitation process, what went well, what could have been done better. Interview, 1-2 persons, inteview guide, semistructural interview. Then summarize the results in the elixitaion.tex.
 \input{subsections/elicitation.tex}
 
-\section{Functional Requirements}
-% Ossian
-% Describe what the system does, i.e., the services it provides to the users.
-\input{subsections/functionalRequirements.tex}
-
-\section{Data / Non-Functional Requirements}
-% Jacob & Felix
-% Details about the data the system will handle, API's etc, data structure and aggregations
-\input{subsections/dataRequirements.tex}
-
-\section{Quality Requirements}
-% Simon Persson
-% Describe the quality attributes of the system, such as performance, usability, etc.
-\input{subsections/qualityRequirements.tex}
+\newpage
+\section{Requirements Specification}
+\input{subsections/requirements.tex}
 
 
 \section{Release Plan}
@@ -86,18 +75,19 @@ The system should support features that enable the business to reach new markets
 \section{Validation List}
 \input{subsections/validationList.tex}
 
-\section{Mockups}
-% André & Jonathan
-% Figma wireframes or lofi prototypes
-\begin{figure}[h]
-\includegraphics[width=1\textwidth]{resources/mockup1.png}
-\caption{User interface showing the search page, dynamic date picker and filters.}
-\end{figure}
+% \section{Functional Requirements}
+% Ossian
+% Describe what the system does, i.e., the services it provides to the users.
+% \input{subsections/functionalRequirements.tex} % Commented out because it's not relevent in new structure 
 
-\begin{figure}[h]
-\includegraphics[width=1\textwidth]{resources/mockup2.png}
-\caption{User interface showing the search results page with a list of flights and a heatmap.}
-\end{figure}
+% \section{Data / Non-Functional Requirements}
+% Jacob & Felix
+% Details about the data the system will handle, API's etc, data structure and aggregations
+% \input{subsections/dataRequirements.tex} % Commented out because it's not relevent in new structure 
 
+% \section{Quality Requirements}
+% Simon Persson
+% Describe the quality attributes of the system, such as performance, usability, etc.
+% \input{subsections/qualityRequirements.tex} % Commented out because it's not relevent in new structure 
 
 \end{document}
