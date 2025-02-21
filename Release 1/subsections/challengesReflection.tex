@@ -6,3 +6,23 @@ To address this, we restructured our requirements specification into sections ba
 Also, we updated our requirement naming convention from numbered identifiers to camelCase IDs. This change enhances clarity and consistency across the document while improving readability and maintainability. The camelCase format ensures that requirement identifiers are more descriptive and making cross-referencing simpler when working with different system components.
 
 These refinements have significantly enhanced the structure and readability of our requirements specification, ensuring that it better supports both development and validation processes.
+
+\subsection{Release planning and prioritization}
+Challanges met:
+
+•	DateRangeMap precedes DateRangeSearch (the map must support flexible dates before search can use them)
+•	ListFlightsFromMap requires ShowFlights (list view depends on retrieving flight details)
+•	SearchCheapFlights precedes ListCheapFlights (flights must be found before they can be listed)
+•	ListCheapFlights requires SearchCheapFlights (the listing function depends on the search results)
+•	SearchCheapDestinations precedes ListCheapFlights (finding cheap destinations must occur before listing them)
+•	DateRangeSearch requires DateRangeMap (searching by date range depends on the map supporting this feature first)
+•	ShowFlights requires SearchCheapFlights (users must search for flights before being able to book them)
+•	SaveFavoriteCity requires AccountCreation (only registered users can save favorite cities)
+•	AccountCreation precedes EmailConfirmation (accounts must be created before confirming email)
+•	EmailConfirmation requires CreateAccountEmail (email confirmation depends on users creating accounts first)
+•	CreateAccountEmail precedes EmailConfirmation (email account creation must occur before confirmation)
+•	EmailChange requires AccountCreation (users must have an account before changing their email)
+•	ChangePassword requires AccountCreation (users must have an account before changing their password)
+•	PasswordReset requires AccountCreation (users must have an account before requesting a password reset)
+•	MultipleTicketPrices requires ShowFlights (ticket prices must be displayed for selected flights)
+•	MultiFlightTrips requires MultipleTicketPrices (multi-leg trips depend on viewing multiple ticket prices)

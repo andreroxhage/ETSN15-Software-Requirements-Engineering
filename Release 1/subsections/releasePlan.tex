@@ -1,45 +1,83 @@
-% In R4 only include features relevant mockups.
+The release plan is created using ReqT, with features prioritized based on a release planning constraint problem. However, the results are somewhat unclear, as some features show negative benefits.
 
-\begin{longtable}{|c|c|c|c|}
-    \hline
-\rowcolor{headergray}
-\textbf{Release} & \textbf{Feature} & \textbf{Priority} & \textbf{Prioritization Motivation / Explanation} \\
-\hline
-\endfirsthead
-\rowcolor{headergray}
-\hline
-\textbf{Release} & \textbf{Feature} & \textbf{Priority} & \textbf{Prioritization Motivation / Explanation} \\
-\hline
-\endhead
-\hline
-\endfoot
-\hline
-\endlastfoot
+Prioritization is primarily driven by dependencies, required feature orders, and maximizing the benefit-cost ratio. While features with the highest benefit and lowest cost are preferred, the main focus is on distributing development and testing resources efficiently to enhance productivity and accelerate time to market. Releases 4, 5, and 6 emphasize structured resource allocation to optimize feature delivery.
 
-4 & Feature 1 & High & Explanation for Feature 1 \\
-4 & Feature 2 & Medium & Explanation for Feature 2 \\
-4 & Feature 3 & Low & Explanation for Feature 3 \\
-\hline
-5 & Feature 1 & High & Explanation for Feature 1 \\
-5 & Feature 2 & Medium & Explanation for Feature 2 \\
-5 & Feature 3 & Low & Explanation for Feature 3 \\
-\hline
+\subsection{Release R4}
+\textbf{Benefit: 1000} \\
+\textbf{Cost: -568} \\
 
-\end{longtable}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Feature} & \textbf{Benefit} & \textbf{Cost} \\
+\midrule
+ChangePassword & 547 & -334 \\
+CreateAccountEmail & -785 & 351 \\
+DateRangeMap & 555 & -968 \\
+EmailChange & -53 & -191 \\
+GeolocationService & 955 & 671 \\
+HeatmapSearch & -479 & -292 \\
+ListCheapFlights & -615 & 474 \\
+ListFlightsFromMap & -910 & -210 \\
+MarketingChannels & -39 & 948 \\
+MultiFlightTrips & 38 & 142 \\
+MultipleTicketPrices & 943 & -644 \\
+PasswordReset & 670 & 701 \\
+SearchCheapDestinations & -388 & -689 \\
+SearchCheapFlights & -534 & 926 \\
+ShowFlights & 678 & 97 \\
+StatisticsReport & 352 & -698 \\
+\bottomrule
+\end{tabular}
 
-% Update ID of reqs
-Release 4:
-\begin{itemize}
-    \item F8-D  Q8-D  The map should reflect date changes in under 2 seconds without requiring a full reload. See figure 2.
-    \item F2-D  Q2-D  The system should support flexible date ranges spanning at least 30 days for price comparisons. See figure 2.
-    \item F3-D  Q3-D  Location detection should be completed in under 3 seconds with at least 95\% accuracy.
-    \item F4-D  Q4-P  The system should retrieve and display flight prices within 2 seconds for a standard query.
-    \item F5-P  Q5-P  The list should support sorting by price, duration, and airline, with sorting applied in under 1 second.
-    \item F7-P  Q7-D  The heatmap should update dynamically within 3 seconds of data input or changes.
-    \item F8-D  Q8-D  The map should reflect date changes in under 2 seconds without requiring a full reload.
-\end{itemize}
+\subsection{Release R5}
+\textbf{Benefit: -980} \\
+\textbf{Cost: 645} \\
 
-Release 5:
-\begin{itemize}
-    \item F15-D  Q15-D  Email verification links should be sent within 5 seconds and expire after 24 hours.
-\end{itemize}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Feature} & \textbf{Benefit} & \textbf{Cost} \\
+\midrule
+AccountCreation & -828 & 897 \\
+AirportSelection & 354 & -179 \\
+ChangePassword & -510 & -213 \\
+DateRangeSearch & 586 & -157 \\
+EmailConfirmation & -668 & -455 \\
+GeolocationService & -72 & 687 \\
+HeatmapSearch & 457 & -784 \\
+ListCheapFlights & 851 & -616 \\
+ListFlightsFromMap & -587 & 972 \\
+MarketingConsent & -326 & -371 \\
+MultiFlightTrips & -587 & 607 \\
+MultipleTicketPrices & 468 & 69 \\
+ShowFlights & 411 & -854 \\
+StatisticsReport & -410 & 713 \\
+\bottomrule
+\end{tabular}
+
+\subsection{Release R6}
+\textbf{Benefit: -849} \\
+\textbf{Cost: 910} \\
+
+\begin{tabular}{lrr}
+\toprule
+\textbf{Feature} & \textbf{Benefit} & \textbf{Cost} \\
+\midrule
+AccountCreation & -94 & 44 \\
+AirportSelection & -222 & -982 \\
+B2BFindFlights & 272 & -832 \\
+CreateAccountEmail & -320 & -721 \\
+DateRangeMap & -249 & 918 \\
+EmailChange & 939 & 19 \\
+EmailConfirmation & -900 & 248 \\
+ListCheapFlights & -623 & 651 \\
+MarketingChannels & 140 & -535 \\
+MultiFlightTrips & 403 & 298 \\
+PasswordReset & -355 & 855 \\
+SaveFavoriteCity & 729 & -481 \\
+SearchCheapDestinations & 62 & -17 \\
+SearchCheapFlights & 219 & 511 \\
+\bottomrule
+\end{tabular}
+
+\subsection{Release R7 - Quality Assurance}
+After release R6, a minimal viable product should be available. Therefore, the focus of release R7 will be on quality assurance. In this release, all quality requirements will be verified and pursued, ensuring compliance with usability, accessibility, performance, and security standards.
