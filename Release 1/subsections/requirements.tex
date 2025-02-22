@@ -29,7 +29,16 @@
 \end{quote}
 
 \subsection{User Security}
-\textbf{...}:... \\ \\
+\textbf{LawCompliance}:The system should comply with global data protection regulations. Domain-level requirement ensuring user data privacy.
+\begin{quote}
+    \textbf{GDPRCompliance}: Perform a GDPR audit to ensure compliance with data protection regulations. \\ \\
+    Document and address any issues found during the audit.
+\end{quote}
+\textbf{SecureDataEncryption}: User data should be encrypted both in transit and at rest. Domain-level security requirement.
+\begin{quote}
+    \textbf{DataEncryptionCheck}: Ensure that all user data is encrypted using secure protocols and stored securely. \\ \\
+    Perform security audits and penetration tests to verify encryption and storage mechanisms.
+\end{quote}
 
 \subsection{Flight Search}
 \textbf{SearchCheapFlights}: Travellers can find destinations with cheap flights when providing a departure city and dates. Goal-level requirement defining a key system function.
@@ -37,7 +46,6 @@
     \textbf{FastSearchResults}: Search results should be displayed within 2 seconds for a standard query.\\ \\ 
     Tested by generating random inputs and measuring response time using automated performance testing tools, logging response times for 1000+ random queries.
 \end{quote}
-
 \textbf{ListCheapFlights}: Travellers can see a text list of cheap flights to a destination. Product-level feature for displaying search results.
 \begin{quote}
     \textbf{TextListSupport}: The list should support sorting by price, duration, and airline, with sorting applied in under 1 second.\\ \\ 
@@ -154,13 +162,37 @@
     \textbf{FastStatisticsReport}: Reports should be generated in under 10 seconds for a dataset covering the last 6 months. \\ \\
     Execute test report requests and measure query execution and rendering time.
 \end{quote}
+\textbf{AnonymizedData}: User data should be anonymized for analytics. 
+\begin{quote}
+    \textbf{AnonymizedCheck}: Ensure that all personally identifiable information (PII) is removed or obfuscated before generating reports. Verify through data audits and compliance checks. \\ \\
+\end{quote}
+\textbf{DynamicResourceAllocation}: The system should allocate resources dynamically based on load. Goal-level requirement for system scalability.
+\begin{quote}
+    \textbf{ResourceAllocationCheck}: The system should scale up to handle 1000 concurrent users without slowdown. \\ \\
+    Simulate 1000+ concurrent users with load-testing tools and measure system response time. For example AWS.
+\end{quote}
+\textbf{UptimeGuarantee}: The system should have an uptime of at least 99.9\%. Goal-level requirement for system reliability.
+\begin{quote}
+    \textbf{UptimeMonitoring}: Monitor system uptime and ensure it meets the 99.9\% requirement. \\ \\
+    Use uptime monitoring tools to track system availability over time.
+\end{quote}
+\textbf{AutoFailoverMechanism}: The system should have an automatic failover mechanism. The system should automatically switch to a backup server in case of a failure. Goal-level requirement for system reliability.
+\begin{quote}
+    \textbf{FailoverTesting}: Simulate a system failure and verify that the failover mechanism is triggered within 5 seconds. \\ \\
+    Use automated tests to simulate system failures and measure failover time.
+\end{quote}
+\textbf{APIIntegrationSupport}: The system should support integration with external APIs. Goal-level requirement for system extensibility.
+\begin{quote}
+    \textbf{APIIntegrationCheck}: Ensure that the system can integrate with at least the necessary external APIs without performance degradation. \\ \\
+    Test system performance with and without API integrations to measure impact.
+\end{quote}
+
 \subsubsection{Data Model}
 The design level data requirements are represented through a E/R diagram:
 
 \includegraphics[width=1\textwidth]{resources/dataRelations.PNG}
 
 \subsection{Others}
-
 \textbf{MultipleTicketPrices}: Travellers can see prices for multiple tickets. Product-level requirement enabling comparison of ticket prices.
 \begin{quote}
     \textbf{FastMultiTicketPrices}: The system should allow searching for up to 10 passengers simultaneously without affecting response time. Test by searching for 10 tickets and verifying that all prices are displayed without errors.\\ \\
