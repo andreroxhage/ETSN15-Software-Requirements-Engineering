@@ -51,10 +51,10 @@ DONE! Add Goal level requirements, "smell of money", before or after the introdu
 
 #### Function requirements:
 
-maybe task desriptions for heatmap feature (our some main feature)
-subsections for grouping different features.
+DONE! maybe task desriptions for heatmap feature (our some main feature)
+DONE! subsections for grouping different features.
 
-Reconsider ID system: robust for document restructoring
+DONE! Reconsider ID system: robust for document restructoring
 DONE! F2,F4 product or domain level. Skip naming -P -D and instead write about the level in the requirement. No need to argue it just tell which level it is
 
 F5, F9 are very similar. Elaborate so the difference is clear. If we make subsections it will be clearer separation
