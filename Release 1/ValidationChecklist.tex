@@ -1,0 +1,44 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=3cm]{geometry}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{xcolor, colortbl}
+\definecolor{headergray}{gray}{0.9} % Light gray for table headers
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+\usepackage{parskip}
+% \usepackage{csquotes}
+% \usepackage[hyperref,backend=biber,style=ieee,isbn=true,urldate=iso8601]{biblatex}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+% \usepackage{listings}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{mdframed}
+
+%% Hyperref options
+\makeatletter
+\hypersetup{
+    linktoc=all,
+    unicode=true,
+    pdfcreator=,
+    pdftitle={\@title},
+    pdfauthor={\@author},
+    pdfdisplaydoctitle=true,
+}
+
+\title{Validation Checklist}
+\author{Jonathan Ahlström \and Ossian Gewert \and Jacob Jönsson \and Simon Persson \and André Roxhage \and Felix Sundholm}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+    \input{../group_info}
+\end{center}
+
+\input{subsections/validationList.tex}
+\end{document}
