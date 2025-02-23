@@ -30,7 +30,7 @@ no code needed!
 send email to airlines people, for elicitations.
 Need two types of stakeholders for higher grade (users, and ???)
 
-continuesly write the reflections
+continuously write the reflections
 
 ### Project Mission - feedback
 
@@ -51,7 +51,7 @@ DONE! Add Goal level requirements, "smell of money", before or after the introdu
 
 #### Function requirements:
 
-DONE! maybe task desriptions for heatmap feature (our some main feature)
+DONE! maybe task descriptions for heatmap feature (our some main feature)
 DONE! subsections for grouping different features.
 
 DONE! Reconsider ID system: robust for document restructoring
@@ -67,7 +67,7 @@ F21, F22 maybe they are product or feature level reqiurements, perhaps they are 
 Add DR1 to ER diagram
 flight search - schedule (1-1)? rethink the cardinality
 
-Vritual window missing ID as well. Needs more descruptions regarding the context of the windows, add text before the virtual window.
+Virtual window missing ID as well. Needs more descruptions regarding the context of the windows, add text before the virtual window.
 
 #### Quality
 
@@ -77,7 +77,7 @@ André can add usability requirement SUS scale, score above 50 and WCAG 2.1 stan
 
 #### Other things
 
-DONE! Add text description before context diagram, add an id to it. Maybe move it to near intro if we decide to use it as a explaination to the system.
+DONE! Add text description before context diagram, add an id to it. Maybe move it to near intro if we decide to use it as a explanation to the system.
 
 Release plan. Add text before table.
 
