@@ -1,12 +1,12 @@
 \subsection{Heatmap Visualization}
 \textbf{HeatmapSearch}: Travellers can see destinations with cheap flights on a heatmap.
-    Product-level feature enhancing visualization. See an example in figure 2.
+    Product-level feature enhancing visualization. See an example in \autoref{fig:mockup2}.
     \begin{quote}
         \textbf{HeatmapPerformance}: The heatmap should update dynamically within 3 seconds of data input or changes. \\ \\
         Monitor UI logs to confirm rendering completion time after date modifications.
     \end{quote}
     \begin{quote}
-        \textbf{HeatmapVisibility}: The heatmap should be visible on all devices and screen sizes, while giving a visually appealing representation of data, see figure 1 and 2. Note the examples are only prototypes and are not final.
+        \textbf{HeatmapVisibility}: The heatmap should be visible on all devices and screen sizes, while giving a visually appealing representation of data, see \autoref{fig:mockup1} and \autoref{fig:mockup2}. Note the examples are only prototypes and are not final.
     \end{quote}
 \textbf{DateRangeMap}: Travellers can change the dates for which the map shows data. Domain-level control for flight search customization.
     \begin{quote}
@@ -188,9 +188,13 @@
 \end{quote}
 
 \subsubsection{Data Model}
-The design level data requirements are represented through a E/R diagram:
+The design level data requirements are represented through a E/R diagram in \autoref{fig:data-model}.
 
-\includegraphics[width=1\textwidth]{resources/dataRelations.PNG}
+\begin{figure}[H]
+    \includegraphics[width=1\textwidth]{resources/dataRelations.PNG}
+    \caption{Entity/Relationship data model}
+    \label{fig:data-model}
+\end{figure}
 
 \subsection{Others}
 \textbf{MultipleTicketPrices}: Travellers can see prices for multiple tickets. Product-level requirement enabling comparison of ticket prices.
@@ -218,11 +222,13 @@ Simulate 50+ concurrent users with load-testing tools for example JMeter and mea
 \begin{figure}[h]
     \includegraphics[width=.89\textwidth]{resources/mockup1.png}
     \caption{User interface showing the search page, dynamic date picker and filters.}
+    \label{fig:mockup1}
 \end{figure}
 
 \begin{figure}[h]
     \includegraphics[width=.89\textwidth]{resources/mockup2.png}
     \caption{User interface showing the search results page with a list of flights and a heatmap.}
+    \label{fig:mockup2}
 \end{figure}
 
 \newpage

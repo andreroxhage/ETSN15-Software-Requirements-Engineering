@@ -14,6 +14,7 @@
 % \usepackage[hyperref,backend=biber,style=ieee,isbn=true,urldate=iso8601]{biblatex}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 % \usepackage{listings}
+\usepackage{float}
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{mdframed}
@@ -49,13 +50,18 @@ The naming convention used for requirements are descriptive camelCase names for 
 The overall goal of the system is to provide a platform for users to find cheap flights while driving revenue for the business and gain market share.
 
 \subsection{Context Diagram}
-The context diagram illustrates the systems key stakeholders in the inner domain. This includes travellers, travel agencies, airlines, IT maintenance and ad providers. In the outer domiain, the context diagram shows marketing platforms, Google Maps for displaying maps and advertisers.
+The context diagram (\autoref{fig:context-diagram}) illustrates the systems key stakeholders in the inner domain. This includes travellers, travel agencies, airlines, IT maintenance and ad providers. In the outer domiain, the context diagram shows marketing platforms, Google Maps for displaying maps and advertisers.
 % André can update this if needed
 % Explanation of diagram and its components
-\includegraphics[width=.99\textwidth]{resources/contextDiagram.png}
+\begin{figure}[H]
+    \includegraphics[width=.99\textwidth]{resources/contextDiagram.png}
+    \caption{Context diagram}
+    \label{fig:context-diagram}
+\end{figure}
 
 \subsection{Business Goals}
-The system should help gain revenue by providing features that attract more customers and encourage existing customers to fly more. By differentiating the product from competitors, using unique data visualization, the system should be able to gain a competitive advantage. See figure 1 and 2 for a visual representation of the system.
+The system should help gain revenue by providing features that attract more customers and encourage existing customers to fly more. By differentiating the product from competitors, using unique data visualization, the system should be able to gain a competitive advantage.
+See \autoref{fig:mockup1} and \autoref{fig:mockup2} for a visual representation of the system.
 
 The system should include features that improve customer satisfaction and loyalty, leading to higher customer retention rates.
 
