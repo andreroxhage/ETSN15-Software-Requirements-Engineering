@@ -218,6 +218,46 @@ The design level data requirements are represented through a E/R diagram in \aut
 Simulate 50+ concurrent users with load-testing tools for example JMeter and measure system response time.
 \end{quote}
 
+%TODO ADD DESCRIPTION TO FOLLOWING PART
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        & \textbf{Critical} & \textbf{Important} & \textbf{As usual} & \textbf{Unimportant} & \textbf{Ignore} \\
+        \hline
+        \textbf{Operation} & & & & & \\
+        Integrity/security & & & x & & \\
+        Correctness & & & x & & \\
+        Reliability/availability & 1 & & & & \\
+        Usability & 3 & & & & \\
+        Efficiency & & 2 & & & \\
+        \hline
+        \textbf{Revision} & & & & & \\
+        Maintainability & & & x & & \\
+        Testability & & & x & & \\
+        Flexibility & & & x & & \\
+        \hline
+        \textbf{Transition} & & & & & \\
+        Portability & & & & x & \\
+        Interoperability & & 4 & & 4 & \\
+        Reusability & & & & & x \\
+        Installability & & 5 & & & 5 \\
+        \hline
+    \end{tabular}
+    \caption{Software Quality Characteristics}
+    \label{tab:quality_characteristics}
+\end{table}
+
+\subsection*{Explanations}
+\begin{enumerate}
+    \item It is critical that the system is always available since it can be used by anyone across the world, meaning we have the potential to gain customers at any time of the day. If availability is below 99\%, the company loses money, and key stakeholders, such as airlines, are negatively impacted.
+    \item If the system cannot filter or return proper search results quickly, users may grow impatient and leave for a competitor.
+    \item The system must be easy to navigate and use since our customer base includes anyone willing to travel. Users will have a wide range of experience using websites. \textbf{TODO:} Our differentiation lies in ease of learning and user satisfaction with how we display data.
+    \item The system is not required to interact with other systems like file transfers or specific hardware. However, some components need to cooperate with external systems, such as our ad provider or direct links to airlines for flight booking.
+    \item Since the system is web-based on computer workstations, installation is unnecessary. However, for the mobile version, an app must be installed, which should be easy to download from platforms like the App Store or Google Play.
+\end{enumerate}
+
 \newpage
 \begin{figure}[h]
     \includegraphics[width=.89\textwidth]{resources/mockup1.png}
