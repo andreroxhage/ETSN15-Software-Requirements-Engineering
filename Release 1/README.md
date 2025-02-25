@@ -89,3 +89,52 @@ Make sure to include
   - project decisions, why did we chose the methods etc.
   - what took more or less time etc
 - cover every single method use and a reflection for that
+
+
+### Release 2 - feedback
+
+#### Validation report:
+Think outside the checklist
+check the grading grid for what we should demonstrate during validation
+add additional sections outside the checklist
+if prioritization is not part of the checklist add your own prioritaztion
+
+#### SRS:
+Tag quality requirements. E.g. add "quality" in brackets.
+Maybe write in text that indented requirements are quality requirements
+
+Data model should have ID in CamelCase as it is a requirement
+
+Motivate why requirements in E/R diagram are design level
+
+Sort out negative numbers, maybe discuss with Björn
+
+Missing details on prioritization.
+Separate from release plan, rank order of features
+
+Dependencies between reqs/features should be included in SRS
+
+More than one prioritization technique, at least two prioritization techniques
+100$? Three prio levels - must have, ...
+
+Usually Prioritization section before Release Plan section
+
+Show how have we taken several stakeholders into account during prioritization
+
+We could put reqT code snippets into the SRS
+
+Remove validation checklist from R3 SRS, and only send it in as a separate document
+
+#### Project Experiences:
+Move constraints to SRS
+
+- Make sure to have reflections on all parts
+- What worked? What did not work?
+- What could have been done differently
+- What approaches/techniques complemented each other
+- Cover all techniques used
+
+
+#### Internal validation
+- Use our own checklist
+- Use the grading grid
