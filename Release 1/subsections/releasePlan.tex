@@ -1,23 +1,27 @@
-The release plan is created using reqT, an open source requirements engineering tool that provides a structured approach to requirements modeling and release planning. The tool uses a flexible requirements modeling language that connects entities (like Features) with relations and attributes, enabling systematic analysis and prioritization.
+The release plan is created using reqT, an open source requirements engineering tool that provides a structured approach to requirements modeling and release planning. The tool uses a flexible requirements modeling language that connects entities (like Features) with relations and attributes, enabling systematic analysis and prioritization. Our prioritization strategy uses multiple methods:
 
-Our prioritization strategy uses multiple methods:
+\textbf{Benefit-Cost Analysis:} Features are evaluated based on their benefit-cost ratio, where benefits represent the estimated business value and costs represent implementation effort. The benefit values are determined by analyzing the priorities of our key stakeholders:
+\begin{itemize}
+\item Travelers (Primary Users): Emphasis on usability, search capabilities, and booking convenience
+\item Airlines: Focus on integration capabilities, data security, and business operations
+\item Travel Agencies: Prioritizing B2B features, API support, and comprehensive flight information
+\end{itemize}
 
-1. Benefit-Cost Analysis: Features are evaluated based on their benefit-cost ratio, where benefits represent the estimated business value and costs represent implementation effort. The benefit values are determined by analyzing the priorities of our key stakeholders:
-   - Travelers (Primary Users): Emphasis on usability, search capabilities, and booking convenience
-   - Airlines: Focus on integration capabilities, data security, and business operations
-   - Travel Agencies: Prioritizing B2B features, API support, and comprehensive flight information
-
-2. Priority Classification: Independent of the benefit-cost calculations, features are categorized as:
-   - Must-have: Essential features critical for core functionality
-   - Important: Features that provide significant value but aren't critical
-   - Nice-to-have: Features that add value but could be excluded
+\textbf{Priority Classification:} Independent of the benefit-cost calculations, the features where subjetively prioritized based on the teams experience and knowledge about the project. The features are categorized as:
+\begin{itemize}
+\item Must-have: Essential features critical for core functionality
+\item Important: Features that provide significant value but aren't critical
+\item Nice-to-have: Features that add value but could be excluded
+\end{itemize}
 
 The release planning is formulated as a constraint problem, considering:
-- Dependencies between features
-- Required implementation order
-- Resource allocation across development and testing
-- Stakeholder priorities
-- Technical constraints
+\begin{itemize}
+\item Dependencies between features
+\item Required implementation order
+\item Resource allocation across development and testing
+\item Stakeholder priorities
+\item Technical constraints
+\end{itemize}
 
 \subsection{Feature Dependencies}
 The implementation order is heavily influenced by technical and logical dependencies between features. Key dependencies include:
