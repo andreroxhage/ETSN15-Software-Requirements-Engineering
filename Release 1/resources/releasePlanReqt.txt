@@ -1,0 +1,150 @@
+* Feature: DateRangeMap precedes DateRangeSearch
+* Feature: ListFlightsFromMap requires ShowFlights
+* Feature: SearchCheapFlights precedes ListCheapFlights
+* Feature: ListCheapFlights requires SearchCheapFlights
+* Feature: SearchCheapDestinations precedes ListCheapFlights
+* Feature: DateRangeSearch requires DateRangeMap
+* Feature: ShowFlights requires SearchCheapFlights
+* Feature: SaveFavoriteCity requires AccountCreation
+* Feature: AccountCreation precedes EmailConfirmation
+* Feature: EmailConfirmation requires CreateAccountEmail
+* Feature: CreateAccountEmail precedes EmailConfirmation
+* Feature: EmailChange requires AccountCreation
+* Feature: ChangePassword requires AccountCreation
+* Feature: PasswordReset requires AccountCreation
+* Feature: MultipleTicketPrices requires ShowFlights
+* Feature: MultiFlightTrips requires MultipleTicketPrices
+* Feature: B2BFindFlights requires APIIntegrationSupport
+* Feature: AccountCreation requires SecureDataEncryption
+* Resource: Dev and test has
+  * Feature: HeatmapSearch has Cost: 18
+  * Feature: DateRangeMap has Cost: 5
+  * Feature: ListFlightsFromMap has Cost: 5
+  * Feature: AirportSelection has Cost: 6
+  * Feature: SearchCheapFlights has Cost: 10
+  * Feature: ListCheapFlights has Cost: 3
+  * Feature: SearchCheapDestinations has Cost: 9
+  * Feature: DateRangeSearch has Cost: 8
+  * Feature: GeolocationService has Cost: 2
+  * Feature: ShowFlights has Cost: 7
+  * Feature: SaveFavoriteCity has Cost: 3
+  * Feature: AccountCreation has Cost: 7
+  * Feature: EmailConfirmation has Cost: 5
+  * Feature: CreateAccountEmail has Cost: 4
+  * Feature: EmailChange has Cost: 4
+  * Feature: ChangePassword has Cost: 3
+  * Feature: PasswordReset has Cost: 4
+  * Feature: MarketingConsent has Cost: 1
+  * Feature: StatisticsReport has Cost: 8
+  * Feature: MultipleTicketPrices has Cost: 7
+  * Feature: MultiFlightTrips has Cost: 6
+  * Feature: MarketingChannels has Cost: 4
+  * Feature: B2BFindFlights has Cost: 2
+  * Feature: LawCompliance has Cost: 13
+  * Feature: SecureDataEncryption has Cost: 15
+  * Feature: AnonymizedData has Cost: 10
+  * Feature: DynamicResourceAllocation has Cost: 8
+  * Feature: UptimeGuarantee has Cost: 9
+  * Feature: AutoFailoverMechanism has Cost: 11
+  * Feature: APIIntegrationSupport has Cost: 8
+  * Release: R4 has Capacity: 120
+  * Release: R5 has Capacity: 120
+  * Release: R6 has Capacity: 120
+* Release: R4 precedes Release: R5
+* Release: R5 precedes Release: R6
+* Stakeholder: Traveller has
+  * Prio: 1
+  * Feature: HeatmapSearch has Benefit: 19
+  * Feature: DateRangeMap has Benefit: 11
+  * Feature: ListFlightsFromMap has Benefit: 16
+  * Feature: AirportSelection has Benefit: 9
+  * Feature: SearchCheapFlights has Benefit: 16
+  * Feature: ListCheapFlights has Benefit: 12
+  * Feature: SearchCheapDestinations has Benefit: 11
+  * Feature: DateRangeSearch has Benefit: 10
+  * Feature: GeolocationService has Benefit: 4
+  * Feature: ShowFlights has Benefit: 22
+  * Feature: SaveFavoriteCity has Benefit: 7
+  * Feature: AccountCreation has Benefit: 6
+  * Feature: EmailConfirmation has Benefit: 4
+  * Feature: CreateAccountEmail has Benefit: 5
+  * Feature: EmailChange has Benefit: 4
+  * Feature: ChangePassword has Benefit: 5
+  * Feature: PasswordReset has Benefit: 7
+  * Feature: MarketingConsent has Benefit: 2
+  * Feature: StatisticsReport has Benefit: 1
+  * Feature: MultipleTicketPrices has Benefit: 14
+  * Feature: MultiFlightTrips has Benefit: 12
+  * Feature: MarketingChannels has Benefit: 3
+  * Feature: B2BFindFlights has Benefit: 1
+  * Feature: LawCompliance has Benefit: 5
+  * Feature: SecureDataEncryption has Benefit: 8
+  * Feature: AnonymizedData has Benefit: 7
+  * Feature: DynamicResourceAllocation has Benefit: 3
+  * Feature: UptimeGuarantee has Benefit: 9
+  * Feature: AutoFailoverMechanism has Benefit: 6
+  * Feature: APIIntegrationSupport has Benefit: 4
+* Stakeholder: Airline has
+  * Prio: 2
+  * Feature: HeatmapSearch has Benefit: 17
+  * Feature: DateRangeMap has Benefit: 13
+  * Feature: ListFlightsFromMap has Benefit: 12
+  * Feature: AirportSelection has Benefit: 16
+  * Feature: SearchCheapFlights has Benefit: 16
+  * Feature: ListCheapFlights has Benefit: 14
+  * Feature: SearchCheapDestinations has Benefit: 12
+  * Feature: DateRangeSearch has Benefit: 10
+  * Feature: GeolocationService has Benefit: 3
+  * Feature: ShowFlights has Benefit: 11
+  * Feature: SaveFavoriteCity has Benefit: 3
+  * Feature: AccountCreation has Benefit: 7
+  * Feature: EmailConfirmation has Benefit: 6
+  * Feature: CreateAccountEmail has Benefit: 6
+  * Feature: EmailChange has Benefit: 5
+  * Feature: ChangePassword has Benefit: 4
+  * Feature: PasswordReset has Benefit: 5
+  * Feature: MarketingConsent has Benefit: 7
+  * Feature: StatisticsReport has Benefit: 10
+  * Feature: MultipleTicketPrices has Benefit: 11
+  * Feature: MultiFlightTrips has Benefit: 12
+  * Feature: MarketingChannels has Benefit: 16
+  * Feature: B2BFindFlights has Benefit: 9
+  * Feature: LawCompliance has Benefit: 18
+  * Feature: SecureDataEncryption has Benefit: 19
+  * Feature: AnonymizedData has Benefit: 15
+  * Feature: DynamicResourceAllocation has Benefit: 12
+  * Feature: UptimeGuarantee has Benefit: 17
+  * Feature: AutoFailoverMechanism has Benefit: 16
+  * Feature: APIIntegrationSupport has Benefit: 14
+* Stakeholder: Travel Agency has
+  * Prio: 3
+  * Feature: HeatmapSearch has Benefit: 16
+  * Feature: DateRangeMap has Benefit: 14
+  * Feature: ListFlightsFromMap has Benefit: 12
+  * Feature: AirportSelection has Benefit: 14
+  * Feature: SearchCheapFlights has Benefit: 12
+  * Feature: ListCheapFlights has Benefit: 8
+  * Feature: SearchCheapDestinations has Benefit: 11
+  * Feature: DateRangeSearch has Benefit: 10
+  * Feature: GeolocationService has Benefit: 9
+  * Feature: ShowFlights has Benefit: 10
+  * Feature: SaveFavoriteCity has Benefit: 10
+  * Feature: AccountCreation has Benefit: 9
+  * Feature: EmailConfirmation has Benefit: 9
+  * Feature: CreateAccountEmail has Benefit: 8
+  * Feature: EmailChange has Benefit: 5
+  * Feature: ChangePassword has Benefit: 6
+  * Feature: PasswordReset has Benefit: 6
+  * Feature: MarketingConsent has Benefit: 7
+  * Feature: StatisticsReport has Benefit: 11
+  * Feature: MultipleTicketPrices has Benefit: 12
+  * Feature: MultiFlightTrips has Benefit: 14
+  * Feature: MarketingChannels has Benefit: 18
+  * Feature: B2BFindFlights has Benefit: 17
+  * Feature: LawCompliance has Benefit: 16
+  * Feature: SecureDataEncryption has Benefit: 15
+  * Feature: AnonymizedData has Benefit: 13
+  * Feature: DynamicResourceAllocation has Benefit: 10
+  * Feature: UptimeGuarantee has Benefit: 14
+  * Feature: AutoFailoverMechanism has Benefit: 12
+  * Feature: APIIntegrationSupport has Benefit: 16

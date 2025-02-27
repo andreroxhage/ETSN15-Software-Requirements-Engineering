@@ -1,104 +1,146 @@
-The release plan is created using ReqT, with features prioritized based on a release planning constraint problem. However, the results are somewhat unclear, as some features show negative benefits.
+The release plan is created using reqT, an open source requirements engineering tool that provides a structured approach to requirements modeling and release planning. The tool uses a flexible requirements modeling language that connects entities (like Features) with relations and attributes, enabling systematic analysis and prioritization.
 
-Prioritization is primarily driven by dependencies, required feature orders, and maximizing the benefit-cost ratio. While features with the highest benefit and lowest cost are preferred, the main focus is on distributing development and testing resources efficiently to enhance productivity and accelerate time to market. Releases 4, 5, and 6 emphasize structured resource allocation to optimize feature delivery.
+Our prioritization strategy uses multiple methods:
+
+1. Benefit-Cost Analysis: Features are evaluated based on their benefit-cost ratio, where benefits represent the estimated business value and costs represent implementation effort. The benefit values are determined by analyzing the priorities of our key stakeholders:
+   - Travelers (Primary Users): Emphasis on usability, search capabilities, and booking convenience
+   - Airlines: Focus on integration capabilities, data security, and business operations
+   - Travel Agencies: Prioritizing B2B features, API support, and comprehensive flight information
+
+2. Priority Classification: Independent of the benefit-cost calculations, features are categorized as:
+   - Must-have: Essential features critical for core functionality
+   - Important: Features that provide significant value but aren't critical
+   - Nice-to-have: Features that add value but could be excluded
+
+The release planning is formulated as a constraint problem, considering:
+- Dependencies between features
+- Required implementation order
+- Resource allocation across development and testing
+- Stakeholder priorities
+- Technical constraints
+
+\subsection{Feature Dependencies}
+The implementation order is heavily influenced by technical and logical dependencies between features. Key dependencies include:
+
+\begin{itemize}
+\item Core Infrastructure Dependencies:
+  \begin{itemize}
+  \item SecureDataEncryption must be implemented before AccountCreation
+  \item APIIntegrationSupport enables B2BFindFlights
+  \end{itemize}
+
+\item Search Feature Chain:
+  \begin{itemize}
+  \item SearchCheapFlights is required for ShowFlights and ListCheapFlights
+  \item DateRangeMap must precede DateRangeSearch
+  \item SearchCheapDestinations precedes ListCheapFlights
+  \end{itemize}
+
+\item Account Management Flow:
+  \begin{itemize}
+  \item AccountCreation is prerequisite for:
+    \begin{itemize}
+    \item SaveFavoriteCity
+    \item EmailChange
+    \item ChangePassword
+    \item PasswordReset
+    \end{itemize}
+  \item CreateAccountEmail precedes EmailConfirmation
+  \end{itemize}
+
+\item Advanced Features:
+  \begin{itemize}
+  \item ShowFlights is required for:
+    \begin{itemize}
+    \item ListFlightsFromMap
+    \item MultipleTicketPrices
+    \end{itemize}
+  \item MultipleTicketPrices enables MultiFlightTrips
+  \end{itemize}
+\end{itemize}
+
+These dependencies have been carefully considered in the release planning to ensure a logical and technically feasible implementation sequence.
+
+While features with the highest benefit and lowest cost are generally preferred, the main focus is on distributing development and testing resources efficiently to enhance productivity and accelerate time to market. Releases 4, 5, and 6 emphasize structured resource allocation to optimize feature delivery.
+
+% add dependencies, requires, and stakeholder priorities etc.
+% add col to table with another priority independent of benefit/cost release planning, e.g. priority must-have / important / nice-to-have / etc.
 
 \subsection{Release R4}
 \textbf{Benefit: 1000} \\
-\textbf{Cost: -568} \\
+\textbf{Cost: 95} \\
 
-\begin{tabular}{lrr}
+\begin{tabular}{lrrr}
 \toprule
-\textbf{Feature} & \textbf{Benefit} & \textbf{Cost} \\
+\textbf{Feature} & \textbf{Benefit} & \textbf{Cost} & \textbf{Priority} independent from benefit/cost \\
 \midrule
-ChangePassword & 547 & -334 \\
-CreateAccountEmail & -785 & 351 \\
-DateRangeMap & 555 & -968 \\
-EmailChange & -53 & -191 \\
-GeolocationService & 955 & 671 \\
-HeatmapSearch & -479 & -292 \\
-ListCheapFlights & -615 & 474 \\
-ListFlightsFromMap & -910 & -210 \\
-MarketingChannels & -39 & 948 \\
-MultiFlightTrips & 38 & 142 \\
-MultipleTicketPrices & 943 & -644 \\
-PasswordReset & 670 & 701 \\
-SearchCheapDestinations & -388 & -689 \\
-SearchCheapFlights & -534 & 926 \\
-ShowFlights & 678 & 97 \\
-StatisticsReport & 352 & -698 \\
-LawCompliance & 0 & 0 \\
-SecureDataEncryption & 0 & 0 \\
-AnonymizedData & 0 & 0 \\
-DynamicResourceAllocation & 0 & 0 \\
-UptimeGuarantee & 0 & 0 \\
-AutoFailoverMechanism & 0 & 0 \\
-APIIntegrationSupport & 0 & 0 \\
+SecureDataEncryption & 91 & 15 & Must-have \\
+MarketingChannels & 89 & 4 & Important \\
+UptimeGuarantee & 85 & 9 & Must-have \\
+AirportSelection & 83 & 6 & Must-have \\
+AnonymizedData & 76 & 10 & Must-have \\
+ListFlightsFromMap & 76 & 5 & Important \\
+AutoFailoverMechanism & 74 & 11 & Must-have \\
+B2BFindFlights & 70 & 2 & Important \\
+ListCheapFlights & 64 & 3 & Important \\
+DynamicResourceAllocation & 57 & 8 & Important \\
+StatisticsReport & 54 & 8 & Important \\
+CreateAccountEmail & 41 & 4 & Must-have \\
+GeolocationService & 37 & 2 & Nice-to-have \\
+MarketingConsent & 37 & 1 & Must-have \\
+PasswordReset & 35 & 4 & Must-have \\
+ChangePassword & 31 & 3 & Must-have \\
 \bottomrule 
 \end{tabular}
 
 \subsection{Release R5}
-\textbf{Benefit: -980} \\
-\textbf{Cost: 645} \\
+\textbf{Benefit: 465} \\
+\textbf{Cost: 55} \\
 
-\begin{tabular}{lrr}
+\begin{tabular}{lrrr}
 \toprule
-\textbf{Feature} & \textbf{Benefit} & \textbf{Cost} \\
+\textbf{Feature} & \textbf{Benefit} & \textbf{Cost} & \textbf{Priority} independent from benefit/cost \\
 \midrule
-AccountCreation & -828 & 897 \\
-AirportSelection & 354 & -179 \\
-ChangePassword & -510 & -213 \\
-DateRangeSearch & 586 & -157 \\
-EmailConfirmation & -668 & -455 \\
-GeolocationService & -72 & 687 \\
-HeatmapSearch & 457 & -784 \\
-ListCheapFlights & 851 & -616 \\
-ListFlightsFromMap & -587 & 972 \\
-MarketingConsent & -326 & -371 \\
-MultiFlightTrips & -587 & 607 \\
-MultipleTicketPrices & 468 & 69 \\
-ShowFlights & 411 & -854 \\
-StatisticsReport & -410 & 713 \\
-LawCompliance & 0 & 0 \\
-SecureDataEncryption & 0 & 0 \\
-AnonymizedData & 0 & 0 \\
-DynamicResourceAllocation & 0 & 0 \\
-UptimeGuarantee & 0 & 0 \\
-AutoFailoverMechanism & 0 & 0 \\
-APIIntegrationSupport & 0 & 0 \\
+LawCompliance & 89 & 13 & Must-have \\
+ShowFlights & 74 & 7 & Must-have \\
+MultipleTicketPrices & 72 & 7 & Important \\
+SearchCheapDestinations & 68 & 9 & Important \\
+AccountCreation & 47 & 7 & Must-have \\
+EmailConfirmation & 43 & 5 & Must-have \\
+SaveFavoriteCity & 43 & 3 & Nice-to-have \\
+EmailChange & 29 & 4 & Important \\
 \bottomrule
 \end{tabular}
 
 \subsection{Release R6}
-\textbf{Benefit: -849} \\
-\textbf{Cost: 910} \\
+\textbf{Benefit: 482} \\
+\textbf{Cost: 55} \\
 
-\begin{tabular}{lrr}
+\begin{tabular}{lrrr}
 \toprule
-\textbf{Feature} & \textbf{Benefit} & \textbf{Cost} \\
+\textbf{Feature} & \textbf{Benefit} & \textbf{Cost} & \textbf{Priority} independent from benefit/cost \\
 \midrule
-AccountCreation & -94 & 44 \\
-AirportSelection & -222 & -982 \\
-B2BFindFlights & 272 & -832 \\
-CreateAccountEmail & -320 & -721 \\
-DateRangeMap & -249 & 918 \\
-EmailChange & 939 & 19 \\
-EmailConfirmation & -900 & 248 \\
-ListCheapFlights & -623 & 651 \\
-MarketingChannels & 140 & -535 \\
-MultiFlightTrips & 403 & 298 \\
-PasswordReset & -355 & 855 \\
-SaveFavoriteCity & 729 & -481 \\
-SearchCheapDestinations & 62 & -17 \\
-SearchCheapFlights & 219 & 511 \\
-LawCompliance & 0 & 0 \\
-SecureDataEncryption & 0 & 0 \\
-AnonymizedData & 0 & 0 \\
-DynamicResourceAllocation & 0 & 0 \\
-UptimeGuarantee & 0 & 0 \\
-AutoFailoverMechanism & 0 & 0 \\
-APIIntegrationSupport & 0 & 0 \\
+HeatmapSearch & 101 & 18 & Must-have \\
+SearchCheapFlights & 84 & 10 & Important \\
+APIIntegrationSupport & 80 & 8 & Important \\
+DateRangeMap & 79 & 5 & Nice-to-have \\
+MultiFlightTrips & 78 & 6 & Important \\
+DateRangeSearch & 60 & 8 & Important \\
 \bottomrule
 \end{tabular}
 
 \subsection{Release R7 - Quality Assurance}
-After release R6, a minimal viable product should be available. Therefore, the focus of release R7 will be on quality assurance. In this release, all quality requirements will be verified and pursued, ensuring compliance with usability, accessibility, performance, and security standards.
+After release R6, a minimal viable product will be available with all core functionalities implemented. Release R7 focuses on comprehensive quality assurance, including:
+
+\begin{itemize}
+\item Systematic verification of all quality requirements
+\item Usability testing and optimization
+\item Accessibility compliance verification
+\item Performance testing and optimization
+\item Security auditing and hardening
+\item Integration testing across all features
+\item User acceptance testing
+\item Documentation completion and validation
+\end{itemize}
+
+This dedicated quality assurance phase ensures the product meets all specified standards and provides a robust foundation for future enhancements. During this release, the team will actively work on implementing and refining quality-focused features while conducting the comprehensive testing and validation processes. This parallel approach ensures that quality is built into the product rather than being treated as just a final verification step.
