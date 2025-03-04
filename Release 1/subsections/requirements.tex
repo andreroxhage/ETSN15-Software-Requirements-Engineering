@@ -3,7 +3,7 @@ The requirements in this document follow a hierarchical structure where indented
 For example, a functional requirement like \textbf{HeatmapSearch} may have indented quality requirements such as \textbf{HeatmapPerformance} that specify performance criteria for that feature.
 
 \subsection{Heatmap Visualization}
-\textbf{HeatmapSearch}: Travellers can see destinations with cheap flights on a heatmap.
+\textbf{HeatmapSearch}: The system shall display a heatmap that visually represents flight prices for various destinations, with the lowest available prices highlighted using colors.
     Product-level feature enhancing visualization. See an example in \autoref{fig:mockup2}.
     \begin{quote}
         \textbf{HeatmapPerformance}: The heatmap should update dynamically within 3 seconds of data input or changes. \\ \\
@@ -21,7 +21,7 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
     \textbf{FlexibleRangeMap}: The system should support flexible date ranges spanning at least 30 days for price comparisons. \\ \\
     Test by selecting a range of 30-60 days, verifying the system returns results across all days without errors.
 \end{quote}
-\textbf{ListFlightsFromMap}: Travellers can see a text list of destinations with cheap flights shown on map. Product-level display of destinations based on search.
+\textbf{ListFlightsFromMap}: Travellers can see a text list of destinations with the lowest flight prices shown on map. Product-level display of destinations based on search.
     \begin{quote}
         \textbf{TextListsShown}:Destination lists should be updated in real-time when new flight deals become available. \\ \\
         Insert a new deal in the back-end or get deal from airlines API and verify update propagation within milliseconds.
@@ -45,17 +45,17 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
 \end{quote}
 
 \subsection{Flight Search}
-\textbf{SearchCheapFlights}: Travellers can find destinations with cheap flights when providing a departure city and dates. Goal-level requirement defining a key system function.
+\textbf{SearchCheapFlights}: Travellers can find destinations with low flight prices when providing a departure city and dates. Search results shall be ranked by price in ascending order, ensuring the most cost-effective options are prominently displayed. Goal-level requirement defining a key system function.
 \begin{quote}
     \textbf{FastSearchResults}: Search results should be displayed within 2 seconds for a standard query.\\ \\ 
     Tested by generating random inputs and measuring response time using automated performance testing tools, logging response times for 1000+ random queries.
 \end{quote}
-\textbf{ListCheapFlights}: Travellers can see a text list of cheap flights to a destination. Product-level feature for displaying search results.
+\textbf{ListCheapFlights}: The system shall present a structured list of available flights to a specified destination, sorted by price in ascending order. Product-level feature for displaying search results.
 \begin{quote}
     \textbf{TextListSupport}: The list should support sorting by price, duration, and airline, with sorting applied in under 1 second.\\ \\ 
     Use UI performance tests to time sorting actions on datasets of varying sizes for example destinations with a lot of flights or destinations with less flights.
 \end{quote}
-\textbf{SearchCheapDestinations}: Travellers can find cheap flights to a given destination. Domain requirement focusing on the flight search feature.
+\textbf{SearchCheapDestinations}: Travellers can find flights to a given destination. Domain requirement focusing on the flight search feature.
 \begin{quote}
     \textbf{FastPriceDisplay}: The system should retrieve and display flight prices within 2 seconds for a standard query.\\ \\
     Execute automated tests simulating 1000+ searches and log the response time until results are fully rendered. Primarily same as \textit{FastSearchResults}.
