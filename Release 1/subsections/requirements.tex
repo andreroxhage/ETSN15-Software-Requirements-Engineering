@@ -3,8 +3,29 @@ The requirements in this document follow a hierarchical structure where indented
 For example, a functional requirement like \textbf{HeatmapSearch} may have indented quality requirements such as \textbf{HeatmapPerformance} that specify performance criteria for that feature.
 
 \subsection{Heatmap Visualization}
-\textbf{HeatmapSearch}: The system shall display a heatmap that visually represents flight prices for various destinations, with the lowest available prices highlighted using colors.
-    Product-level feature enhancing visualization. See an example in \autoref{fig:mockup2}.
+
+\begin{tabular}{|p{.95\textwidth}|}
+    \hline
+    \textbf{Task:  Find cheap trip destination using heatmap}\\
+    \hline
+    Subtasks:
+    \begin{enumerate}
+        \item Input origin / allow location data
+        \item Navigate heatmap
+        \item Select area
+        \item Select show details for flight
+        \item Get referred to airline
+    \end{enumerate}\\
+    \hline
+    Variants:
+    \begin{enumerate}
+        \item[A] User types in origin airport
+        \item[B] User uses device location data for origin
+    \end{enumerate}\\
+    \hline
+\end{tabular}
+
+\textbf{HeatmapSearch}: The system shall display a heatmap that visually represents flight prices for various destinations, with the lowest available prices highlighted using colors. See an example in \autoref{fig:mockup2}.
     \begin{quote}
         \textbf{HeatmapPerformance}: The heatmap should update dynamically within 3 seconds of data input or changes. \\ \\
         Monitor UI logs to confirm rendering completion time after date modifications.
@@ -45,6 +66,30 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
 \end{quote}
 
 \subsection{Flight Search}
+
+\begin{tabular}{|p{.95\textwidth}|}
+    \hline
+    \textbf{Task: Find cheap flight}\\
+    \hline
+    Purpose: Find cheap flight to general area\\
+    \hline
+    Input parameters:
+    \begin{itemize}
+        \item Origin
+        \item Destination
+        \item Dates
+    \end{itemize}\\
+    \hline
+    Display options:
+    \begin{itemize}
+        \item Heatmap
+        \item List
+        \item Filter
+        \item Date sliders
+    \end{itemize}\\
+    \hline
+\end{tabular}
+
 \textbf{SearchCheapFlights}: Travellers can find destinations with low flight prices when providing a departure city and dates. Search results shall be ranked by price in ascending order, ensuring the most cost-effective options are prominently displayed. Goal-level requirement defining a key system function.
 \begin{quote}
     \textbf{FastSearchResults}: Search results should be displayed within 2 seconds for queries that include a departure city, and travel dates, retrieving data for up to \_ available flights.\\ \\ 
@@ -275,8 +320,5 @@ Simulate 50+ concurrent users with load-testing tools for example JMeter and mea
     \caption{User interface showing the search results page with a list of flights and a heatmap.}
     \label{fig:mockup2}
 \end{figure}
-
-\newpage
-\include{subsections/taskDescriptions}
 
 \newpage
