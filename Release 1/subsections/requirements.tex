@@ -10,7 +10,7 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
         Monitor UI logs to confirm rendering completion time after date modifications.
     \end{quote}
     \begin{quote}
-        \textbf{HeatmapVisibility}: The heatmap should be visible on all devices and screen sizes, while giving a visually appealing representation of data, see \autoref{fig:mockup1} and \autoref{fig:mockup2}. Note the examples are only prototypes and are not final.
+        \textbf{HeatmapVisibility}: The heatmap shall be responsive and maintain readability on screen sizes ranging from 320px (mobile) to 1920px (desktop). It shall use a color gradient that ensures a minimum contrast ratio of 4.5:1 (WCAG AA) for text labels and distinguishable color differences between price categories. See \autoref{fig:mockup1} and \autoref{fig:mockup2}. Note the examples are only prototypes and are not final.
     \end{quote}
 \textbf{DateRangeMap}: Travellers can change the dates for which the map shows data. Domain-level control for flight search customization.
     \begin{quote}
@@ -47,7 +47,7 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
 \subsection{Flight Search}
 \textbf{SearchCheapFlights}: Travellers can find destinations with low flight prices when providing a departure city and dates. Search results shall be ranked by price in ascending order, ensuring the most cost-effective options are prominently displayed. Goal-level requirement defining a key system function.
 \begin{quote}
-    \textbf{FastSearchResults}: Search results should be displayed within 2 seconds for a standard query.\\ \\ 
+    \textbf{FastSearchResults}: Search results should be displayed within 2 seconds for queries that include a departure city, and travel dates, retrieving data for up to \_ available flights.\\ \\ 
     Tested by generating random inputs and measuring response time using automated performance testing tools, logging response times for 1000+ random queries.
 \end{quote}
 \textbf{ListCheapFlights}: The system shall present a structured list of available flights to a specified destination, sorted by price in ascending order. Product-level feature for displaying search results.
@@ -57,7 +57,7 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
 \end{quote}
 \textbf{SearchCheapDestinations}: Travellers can find flights to a given destination. Domain requirement focusing on the flight search feature.
 \begin{quote}
-    \textbf{FastPriceDisplay}: The system should retrieve and display flight prices within 2 seconds for a standard query.\\ \\
+    \textbf{FastPriceDisplay}: The system shall retrieve and display flight prices within 2 seconds for search requests that include a departure city, and travel dates, processing up to \_ flight options per request.\\ \\
     Execute automated tests simulating 1000+ searches and log the response time until results are fully rendered. Primarily same as \textit{FastSearchResults}.
 \end{quote}
 \textbf{DateRangeSearch}: Travellers should be able to provide a range of possible dates. Domain-level functionality supporting flexible searches, in flight search feature.
