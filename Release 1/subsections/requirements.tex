@@ -3,6 +3,28 @@ The requirements in this document follow a hierarchical structure where indented
 For example, a functional requirement like \textbf{HeatmapSearch} may have indented quality requirements such as \textbf{HeatmapPerformance} that specify performance criteria for that feature.
 
 \subsection{Heatmap Visualization}
+
+\begin{tabular}{|p{.95\textwidth}|}
+    \hline
+    \textbf{Task:  Find cheap trip destination using heatmap}\\
+    \hline
+    Subtasks:
+    \begin{enumerate}
+        \item Input origin / allow location data
+        \item Navigate heatmap
+        \item Select area
+        \item Select show details for flight
+        \item Get referred to airline
+    \end{enumerate}\\
+    \hline
+    Variants:
+    \begin{enumerate}
+        \item[A] User types in origin airport
+        \item[B] User uses device location data for origin
+    \end{enumerate}\\
+    \hline
+\end{tabular}
+
 \textbf{HeatmapSearch}: Travellers can see destinations with cheap flights on a heatmap.
     Product-level feature enhancing visualization. See an example in \autoref{fig:mockup2}.
     \begin{quote}
@@ -45,6 +67,30 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
 \end{quote}
 
 \subsection{Flight Search}
+
+\begin{tabular}{|p{.95\textwidth}|}
+    \hline
+    \textbf{Task: Find cheap flight}\\
+    \hline
+    Purpose: Find cheap flight to general area\\
+    \hline
+    Input parameters:
+    \begin{itemize}
+        \item Origin
+        \item Destination
+        \item Dates
+    \end{itemize}\\
+    \hline
+    Display options:
+    \begin{itemize}
+        \item Heatmap
+        \item List
+        \item Filter
+        \item Date sliders
+    \end{itemize}\\
+    \hline
+\end{tabular}
+
 \textbf{SearchCheapFlights}: Travellers can find destinations with cheap flights when providing a departure city and dates. Goal-level requirement defining a key system function.
 \begin{quote}
     \textbf{FastSearchResults}: Search results should be displayed within 2 seconds for a standard query.\\ \\ 
@@ -275,8 +321,5 @@ Simulate 50+ concurrent users with load-testing tools for example JMeter and mea
     \caption{User interface showing the search results page with a list of flights and a heatmap.}
     \label{fig:mockup2}
 \end{figure}
-
-\newpage
-\include{subsections/taskDescriptions}
 
 \newpage
