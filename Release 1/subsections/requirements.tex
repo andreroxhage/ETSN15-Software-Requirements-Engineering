@@ -34,7 +34,7 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
     \begin{quote}
         \textbf{HeatmapVisibility}: The heatmap shall be responsive and maintain readability on screen sizes ranging from 320px (mobile) to 1920px (desktop). It shall use a color gradient that ensures a minimum contrast ratio of 4.5:1 (WCAG AA) for text labels and distinguishable color differences between price categories. See \autoref{fig:mockup1} and \autoref{fig:mockup2}. Note the examples are only prototypes and are not final.
     \end{quote}
-\textbf{DateRangeMap}: Travellers can change the dates for which the map shows data. Domain-level control for flight search customization.
+\textbf{DateRangeMap}: Travellers and Travel Agencies can change the dates for which the map shows data. Domain-level control for flight search customization.
     \begin{quote}
         \textbf{DateChangeResults}: The map should reflect date changes in under 2 seconds without requiring a full reload. \\ \\
         Monitor UI logs to confirm rendering completion time after date modifications.
@@ -43,12 +43,12 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
     \textbf{FlexibleRangeMap}: The system should support flexible date ranges spanning at least 30 days for price comparisons. \\ \\
     Test by selecting a range of 30-60 days, verifying the system returns results across all days without errors.
 \end{quote}
-\textbf{ListFlightsFromMap}: Travellers can see a text list of destinations with the lowest flight prices shown on map. Product-level display of destinations based on search.
+\textbf{ListFlightsFromMap}: Travellers and Travel Agencies can see a text list of destinations with the lowest flight prices shown on map. Product-level display of destinations based on search.
     \begin{quote}
         \textbf{TextListsShown}:Destination lists should be updated in real-time when new flight deals become available. \\ \\
         Insert a new deal in the back-end or get deal from airlines API and verify update propagation within milliseconds.
     \end{quote}
-\textbf{AirportSelection}: Travellers can select airports from the heatmap. Product-level feature allowing interactive selection.
+\textbf{AirportSelection}: Travellers and Travel Agencies can select airports from the heatmap. Product-level feature allowing interactive selection.
 \begin{quote}
     \textbf{FastAirportSelection}: Selected airports should be highlighted instantly and search results updated in under 2 seconds. \\ \\ 
     Measure UI update times via browser dev tools or performance logs.
@@ -91,7 +91,7 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
     \hline
 \end{tabular}
 
-\textbf{SearchCheapFlights}: Travellers can find destinations with low flight prices when providing a departure city and dates. Search results shall be ranked by price in ascending order, ensuring the most cost-effective options are prominently displayed. Goal-level requirement defining a key system function.
+\textbf{SearchCheapFlights}: Travellers and Travel Agencies can find destinations with low flight prices when providing a departure city and dates. Search results shall be ranked by price in ascending order, ensuring the most cost-effective options are prominently displayed. Goal-level requirement defining a key system function.
 \begin{quote}
     \textbf{FastSearchResults}: Search results should be displayed within 2 seconds for queries that include a departure city, and travel dates, retrieving data for up to \_ available flights.\\ \\ 
     Tested by generating random inputs and measuring response time using automated performance testing tools, logging response times for 1000+ random queries.
@@ -101,12 +101,12 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
     \textbf{TextListSupport}: The list should support sorting by price, duration, and airline, with sorting applied in under 1 second.\\ \\ 
     Use UI performance tests to time sorting actions on datasets of varying sizes for example destinations with a lot of flights or destinations with less flights.
 \end{quote}
-\textbf{SearchCheapDestinations}: Travellers can find flights to a given destination. Domain requirement focusing on the flight search feature.
+\textbf{SearchCheapDestinations}: Travellers and Travel Agencies can find flights to a given destination. Domain requirement focusing on the flight search feature.
 \begin{quote}
     \textbf{FastPriceDisplay}: The system shall retrieve and display flight prices within 2 seconds for search requests that include a departure city, and travel dates, processing up to \_ flight options per request.\\ \\
     Execute automated tests simulating 1000+ searches and log the response time until results are fully rendered. Primarily same as \textit{FastSearchResults}.
 \end{quote}
-\textbf{DateRangeSearch}: Travellers should be able to provide a range of possible dates for their flight search making the service more flexible and appealing to a wider range of users. Domain-level functionality supporting flexible searches, in flight search feature.
+\textbf{DateRangeSearch}: Travellers and Travel Agencies should be able to provide a range of possible dates for their flight search making the service more flexible and appealing to a wider range of users. Domain-level functionality supporting flexible searches, in flight search feature.
 \begin{quote}
     \textbf{DateRangeCheck}: The system should support flexible date ranges spanning at least 30 days for price comparisons. \\ \\
     Test by selecting a range of 30-60 days, verifying the system returns results across all days without errors.
@@ -253,12 +253,12 @@ for the flight searches and the user accounts in the system.
 \end{figure}
 
 \subsection{Others}
-\textbf{MultipleTicketPrices}: Travellers can see prices for multiple tickets. Product-level requirement enabling comparison of ticket prices.
+\textbf{MultipleTicketPrices}: Travellers and Travel Agencies can see prices for multiple tickets. Product-level requirement enabling comparison of ticket prices.
 \begin{quote}
     \textbf{FastMultiTicketPrices}: The system should allow searching for up to 10 passengers simultaneously without affecting response time. Test by searching for 10 tickets and verifying that all prices are displayed without errors.\\ \\
      Compare response times of searches with 1 vs. 10 passengers under normal and peak loads.
 \end{quote}
-\textbf{MultiFlightTrips}: Travellers can find prices of multi-flight trips. Product-level requirement for multi-leg trip pricing. 
+\textbf{MultiFlightTrips}: Travellers and Travel Agencies can find prices of multi-flight trips. Product-level requirement for multi-leg trip pricing.
     \begin{quote}
         \textbf{PriceRetrieval}:The system should retrieve multi-flight prices in less than 5 seconds, considering layovers and airlines. \\ \\ 
         Run tests for complex multi-leg searches, logging response times for different scenarios.
