@@ -25,7 +25,7 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
     \hline
 \end{tabular}
 
-\textbf{HeatmapSearch}: The system shall display a heatmap that visually represents flight prices for various destinations, with the lowest available prices highlighted using colors. See an example in \autoref{fig:mockup2}.
+\textbf{HeatmapSearch}: The system shall display a heatmap that visually represents flight prices for various destinations, with the lowest available prices highlighted using colors, engaging users in the search process. See an example in \autoref{fig:mockup2}.
     \begin{quote}
         \textbf{HeatmapPerformance}: The heatmap should update dynamically within 3 seconds of data input or changes such as price range. \\ \\
         Monitor UI logs to confirm rendering completion time after changes to input data.
@@ -105,7 +105,7 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
     \textbf{FastPriceDisplay}: The system shall retrieve and display flight prices within 2 seconds for search requests that include a departure city, and travel dates, processing up to \_ flight options per request.\\ \\
     Execute automated tests simulating 1000+ searches and log the response time until results are fully rendered. Primarily same as \textit{FastSearchResults}.
 \end{quote}
-\textbf{DateRangeSearch}: Travellers should be able to provide a range of possible dates. Domain-level functionality supporting flexible searches, in flight search feature.
+\textbf{DateRangeSearch}: Travellers should be able to provide a range of possible dates for their flight search making the service more flexible and appealing to a wider range of users. Domain-level functionality supporting flexible searches, in flight search feature.
 \begin{quote}
     \textbf{DateRangeCheck}: The system should support flexible date ranges spanning at least 30 days for price comparisons. \\ \\
     Test by selecting a range of 30-60 days, verifying the system returns results across all days without errors.
@@ -139,10 +139,9 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
     Document and address any issues found during testing.
 \end{quote}
 
-\textbf{RegularUserFeedback}: The system shall regularly prompt users for feedback. Product-level feature that aims to gather user insights and improve customer satisfaction by understanding user experiences and expectations.
+\textbf{RegularUserFeedback}: The system shall regularly prompt users for feedback. Product-level feature that aims to gather user insights and improve customer satisfaction by understanding user experiences and expectations. 
 \begin{quote}
-    \textbf{FeedbackCheck}: After _ hours of use, the system shall prompt the user with a question such as "What do you think about EasyTrip?"
-    .
+    \textbf{FeedbackCheck}: After \_ hours of use, the system shall prompt the user with the question "What do you think about EasyTrip?" and a rating scale. 
 \end{quote}
 
 \subsection{Account Management \& Personalization}
@@ -205,7 +204,7 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
     \textbf{FastPasswordReset}: Reset emails should be sent within 10 seconds and expire after 30 minutes. \\ \\
     Log email dispatch times and attempt password resets after 30 minutes to confirm expiration.
 \end{quote}
-\textbf{MarketingConsent}: Travellers should be asked about receiving marketing emails during account creation. This consent should be editable in real-time in the Account management section. Domain-level requirement ensuring compliance with marketing preferences.
+\textbf{MarketingConsent}: Travellers should be asked about receiving marketing emails during account creation. This consent should be editable in real-time in the Account management section. The system should log consent preferences for auditing purposes. Domain-level requirement ensuring compliance with marketing preferences.
 \begin{quote}
     \textbf{EmailPreferenceCheck}:Marketing email preferences should be configurable and updated in real-time. \\ \\ 
     Toggle marketing settings in the Account management section and verify backend logs reflect changes within 5 seconds.
@@ -263,7 +262,7 @@ for the flight searches and the user accounts in the system.
         \textbf{PriceRetrieval}:The system should retrieve multi-flight prices in less than 5 seconds, considering layovers and airlines. \\ \\ 
         Run tests for complex multi-leg searches, logging response times for different scenarios.
     \end{quote}
-\textbf{MarketingChannels}: Marketers can have marketing email sent to relevant consenting travellers. Product-level marketing function.
+\textbf{MarketingChannels}: Marketers can send marketing emails to travelers who have explicitly opted in through the account management settings. Product-level marketing function.
 \begin{quote}
     \textbf{CheckMarketing}: Marketing emails should be delivered to 95\% of recipients within 1 minute of sending. \\ \\
     Track email delivery timestamps for mass campaigns and compute success rate over time.
