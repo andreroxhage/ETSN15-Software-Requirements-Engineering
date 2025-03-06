@@ -7,11 +7,13 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
 
 \subsection{Heatmap Visualization}
 
+\textbf{HeatmapSearch}: The system shall display a heatmap that visually represents flight prices for various destinations, with the lowest available prices highlighted using colors, engaging users in the search process. See an example in \autoref{fig:mockup2}. This can be described as a task:
 \begin{table}[H]
 \begin{tabular}{|p{.95\textwidth}|}
     \hline
     \textbf{Task: Find cheap trip destination using heatmap}\\
     \hline
+
     Subtasks:
     \begin{enumerate}
         \item Input origin / allow location data
@@ -31,8 +33,6 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
 \end{tabular}
 \caption*{Task description 1: Finding a cheap trip destination using the heatmap}
 \end{table}
-
-\textbf{HeatmapSearch}: The system shall display a heatmap that visually represents flight prices for various destinations, with the lowest available prices highlighted using colors, engaging users in the search process. See an example in \autoref{fig:mockup2}.
     \begin{quote}
         \textbf{HeatmapPerformance}: The heatmap should update dynamically within 3 seconds of data input or changes such as price range. \\ \\
         Monitor UI logs to confirm rendering completion time after changes to input data.
@@ -73,7 +73,7 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
 \end{quote}
 
 \subsection{Flight Search}
-
+\textbf{SearchCheapFlights}: Travellers and Travel Agencies can find destinations with low flight prices when providing a departure city and dates. Search results shall be ranked by price in ascending order, ensuring the most cost-effective options are prominently displayed. Goal-level requirement defining a key system function. This can be described as a task:
 \begin{table}[H]
 \begin{tabular}{|p{.95\textwidth}|}
     \hline
@@ -99,8 +99,6 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
 \end{tabular}
 \caption*{Task description 2: Finding a cheap flight}
 \end{table}
-
-\textbf{SearchCheapFlights}: Travellers and Travel Agencies can find destinations with low flight prices when providing a departure city and dates. Search results shall be ranked by price in ascending order, ensuring the most cost-effective options are prominently displayed. Goal-level requirement defining a key system function.
 \begin{quote}
     \textbf{FastSearchResults}: Search results should be displayed within 2 seconds for queries that include a departure city, and travel dates, retrieving data for up to \_ available flights.\\ \\ 
     Tested by generating random inputs and measuring response time using automated performance testing tools, logging response times for 1000+ random queries.
