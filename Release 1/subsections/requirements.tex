@@ -34,16 +34,28 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
 \caption*{Task description 1: Finding a cheap trip destination using the heatmap}
 \end{table}
     \begin{quote}
-        \textbf{HeatmapPerformance}: The heatmap should update dynamically within 3 seconds of data input or changes such as price range. \\ \\
+        \textbf{HeatmapPerformance}: The heatmap should update dynamically with
+        good performance after data input or changes such as price range.
+        For updates that require a new response from the server,
+        the server should send the response within 1.5 seconds of receiving the query.
+        For updates that are done locally on the client,
+        the change should be done within 3 seconds on the reference testing devices.\\ \\
         Monitor UI logs to confirm rendering completion time after changes to input data.
+        Measure server response times with server-side logging.
     \end{quote}
     \begin{quote}
         \textbf{HeatmapVisibility}: The heatmap shall be responsive and maintain readability on screen sizes ranging from 320px (mobile) to 1920px (desktop). It shall use a color gradient that ensures a minimum contrast ratio of 4.5:1 (WCAG AA) for text labels and distinguishable color differences between price categories. See \autoref{fig:mockup1} and \autoref{fig:mockup2}. Note the examples are only prototypes and are not final.
     \end{quote}
 \textbf{DateRangeMap}: Travellers and Travel Agencies can change the dates for which the map shows data. Domain-level control for flight search customization.
     \begin{quote}
-        \textbf{DateChangeResults}: The map should reflect date changes in under 2 seconds without requiring a full reload. \\ \\
+        \textbf{DateChangeResults}: The map should reflect date changes with
+        good performance without requiring a full reload.
+        For updates that require a new response from the server,
+        the server should send the response within 1.5 seconds of receiving the query.
+        For updates that are done locally on the client,
+        the change should be done within 2 seconds on the reference testing devices.\\ \\
         Monitor UI logs to confirm rendering completion time after date modifications.
+        Measure server response times with server-side logging.
     \end{quote}
 \begin{quote}
     \textbf{FlexibleRangeMap}: The system should support flexible date ranges spanning at least 30 days for price comparisons. \\ \\
@@ -56,8 +68,11 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
     \end{quote}
 \textbf{AirportSelection}: Travellers and Travel Agencies can select airports from the heatmap. Product-level feature allowing interactive selection.
 \begin{quote}
-    \textbf{FastAirportSelection}: Selected airports should be highlighted instantly and search results updated in under 2 seconds. \\ \\ 
+    \textbf{FastAirportSelection}: Selected airports should be highlighted
+    within 0.4 seconds on the reference testing devices and updated search results
+    should be sent by the server within 1.5 seconds of the query being received.\\\\
     Measure UI update times via browser dev tools or performance logs.
+    Measure server response times with server-side logging.
 \end{quote}
 
 \subsection{User Security}
@@ -100,18 +115,34 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
 \caption*{Task description 2: Finding a cheap flight}
 \end{table}
 \begin{quote}
-    \textbf{FastSearchResults}: Search results should be displayed within 2 seconds for queries that include a departure city, and travel dates, retrieving data for up to \_ available flights.\\ \\ 
+    \textbf{FastSearchResults}: Search results should be displayed with good
+    performance for queries that include a departure city, and travel dates,
+    retrieving data for up to \_ available flights.
+    For updates that require a new response from the server,
+    the server should send the response within 1.5 seconds of receiving the query.
+    For updates that are done locally on the client,
+    the change should be done within 1.5 seconds on the reference testing devices.\\\\
     Tested by generating random inputs and measuring response time using automated performance testing tools, logging response times for 1000+ random queries.
 \end{quote}
 \textbf{ListCheapFlights}: The system shall present a structured list of available flights to a specified destination, sorted by price in ascending order. Product-level feature for displaying search results.
 \begin{quote}
-    \textbf{TextListSupport}: The list should support sorting by price, duration, and airline, with sorting applied in under 1 second.\\ \\ 
+    \textbf{TextListSupport}: The list should support sorting by price,
+    duration, and airline, with sorting applied in under 1 second on the
+    reference testing devices.\\\\
     Use UI performance tests to time sorting actions on datasets of varying sizes for example destinations with a lot of flights or destinations with less flights.
 \end{quote}
 \textbf{SearchCheapDestinations}: Travellers and Travel Agencies can find flights to a given destination. Domain requirement focusing on the flight search feature.
 \begin{quote}
-    \textbf{FastPriceDisplay}: The system shall retrieve and display flight prices within 2 seconds for search requests that include a departure city, and travel dates, processing up to \_ flight options per request.\\ \\
-    Execute automated tests simulating 1000+ searches and log the response time until results are fully rendered. Primarily same as \textit{FastSearchResults}.
+    \textbf{FastPriceDisplay}: The system shall retrieve and display flight prices
+    with good performance for search requests that include a departure city,
+    and travel dates, processing up to \_ flight options per request.
+    For updates that require a new response from the server,
+    the server should send the response within 1.5 seconds of receiving the query.
+    For updates that are done locally on the client,
+    the change should be done within 1.5 seconds on the reference testing devices.\\\\
+    Execute automated tests simulating 1000+ searches and log the response time until results are fully rendered.
+    Measure server response times with server-side logging.
+    Primarily same as \textit{FastSearchResults}.
 \end{quote}
 \textbf{DateRangeSearch}: Travellers and Travel Agencies should be able to provide a range of possible dates for their flight search making the service more flexible and appealing to a wider range of users. Domain-level functionality supporting flexible searches, in flight search feature.
 \begin{quote}
@@ -120,8 +151,10 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
 \end{quote}
 \textbf{GeolocationService}: Travellers can have their device provide their current location. Domain-level feature leveraging geolocation services.
 \begin{quote}
-    \textbf{GeoLocationCheck}:Location detection should be completed in under 3 seconds with at least 95\% accuracy.\\ \\
-    Use GPS data from 50 ore more test cases across different devices and measure accuracy based on expected vs. detected locations.
+    \textbf{GeoLocationCheck}:Location detection should be completed in under 3 seconds
+    with at least 95\% accuracy on the reference testing devices.\\\\
+    Use GPS data from 50 or more test cases across different devices
+    and measure accuracy based on expected vs. detected locations.
 \end{quote}
 \textbf{ShowFlights}: Traveller can click through to ticket booking page for shown flights. Product-level requirement enabling ticket purchase.
     \begin{quote}
@@ -131,8 +164,8 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
     \end{quote}
 \textbf{SaveFavoriteCity}:A signed-in traveller can save favorite cities. Product-level feature for personalization.
 \begin{quote}
-    \textbf{FavoriteCityFetching}: Favorite cities should be stored in under 5 seconds and retrievable in under 1 second. \\ \\
-    Save favorite cities and time retrieval speed via API performance monitoring.
+    \textbf{FavoriteCityFetching}: Favorite cities should be stored in under 5 seconds and retrievable in under 1 second.\\\\
+    Measure web and database server response times with server-side logging.
 \end{quote}
 
 \subsection{User Experience}
@@ -195,27 +228,28 @@ For example, a functional requirement like \textbf{HeatmapSearch} may have inden
     \end{quote}
 \textbf{CreateAccountEmail}: Travellers should be able to create accounts with email addresses and passwords. Productlevel authentication requirement.  
     \begin{quote}
-        \textbf{}: The registration process should take no longer than 15 seconds, including email verification. \\ \\
-        Automate user sign-ups and measure time from form submission to receiving the verification email.
+        \textbf{}: The registration process should take no longer than 15 seconds, including email verification.\\\\
+        Log time when server first receives registration form and time of sending verification email.
     \end{quote}
 \textbf{EmailChange}: Travellers should be able to change their email address. Product-level account management feature.
 \begin{quote}
-    \textbf{EmailChangeConfirmationPerformance}: Changes to email addresses should be confirmed within 10 seconds via a verification email.\\ \\
-    Track the end-to-end time from submission of email change request to email receipt.
+    \textbf{EmailChangeConfirmationPerformance}: Changes to email addresses should be confirmed within 10 seconds via a verification email.\\\\
+    Log time when server first receives email change request and time of sending verification email.
 \end{quote}
 \textbf{ChangePassword}:Travellers should be able to change their passwords. Product-level security feature.
     \begin{quote}
-        \textbf{CheckChangePassword}:Password changes should be effective after 5 seconds and require strong passwords (at least 8 characters, uppercase, lowercase, number, symbol). \\ \\
+        \textbf{CheckChangePassword}: Password changes should be effective within 5 seconds of the server receiving the password change request and require strong passwords (at least 8 characters, uppercase, lowercase, number, symbol).\\\\
         Verify enforcement of password complexity rules and Ensure old credentials become invalid 5 seconds after post-update.
     \end{quote}
 \textbf{PasswordReset}: Travellers should be able to reset their password if they have forgotten it. Product-level usability requirement.
 \begin{quote}
-    \textbf{FastPasswordReset}: Reset emails should be sent within 10 seconds and expire after 30 minutes. \\ \\
-    Log email dispatch times and attempt password resets after 30 minutes to confirm expiration.
+    \textbf{FastPasswordReset}: Reset emails should be sent within 10 seconds
+    of server receiving reset request and expire after 30 minutes.\\\\
+    Log request times and email dispatch times. Attempt password resets after 30 minutes to confirm expiration.
 \end{quote}
 \textbf{MarketingConsent}: Travellers should be asked about receiving marketing emails during account creation. This consent should be editable in real-time in the Account management section. The system should log consent preferences for auditing purposes. Domain-level requirement ensuring compliance with marketing preferences.
 \begin{quote}
-    \textbf{EmailPreferenceCheck}:Marketing email preferences should be configurable and updated in real-time. \\ \\ 
+    \textbf{EmailPreferenceCheck}: Marketing email preferences should be configurable and updated in real-time.\\\\ 
     Toggle marketing settings in the Account management section and verify backend logs reflect changes within 5 seconds.
 \end{quote}
 \textbf{ITMaintainance}: IT Maintainance shall be able to handle requests from users with issues relating to their user accounts.
@@ -270,7 +304,7 @@ for the flight searches and the user accounts in the system.
 \end{quote}
 \textbf{MultiFlightTrips}: Travellers and Travel Agencies can find prices of multi-flight trips. Product-level requirement for multi-leg trip pricing.
     \begin{quote}
-        \textbf{PriceRetrieval}:The system should retrieve multi-flight prices in less than 5 seconds, considering layovers and airlines. \\ \\ 
+        \textbf{PriceRetrieval}:The system should retrieve multi-flight prices in less than 5 seconds, considering layovers and airlines.\\ \\ 
         Run tests for complex multi-leg searches, logging response times for different scenarios.
     \end{quote}
 \textbf{MarketingChannels}: Marketers can send marketing emails to travelers who have explicitly opted in through the account management settings. Product-level marketing function.
