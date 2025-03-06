@@ -1,8 +1,8 @@
-PWD /Users/jonathanahlstrom/Documents/LTH/Kravhantering/ETSN15-Software-Requirements-Engineering/Release 1
+PWD /Users/andre/Documents/Studier/Software Requirement Engineering/ETSN15-Software-Requirements-Engineering/Release 1
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/jonathanahlstrom/Documents/LTH/Kravhantering/ETSN15-Software-Requirements-Engineering/Release 1/SystemRequirements.tex
+INPUT /Users/andre/Documents/Studier/Software Requirement Engineering/ETSN15-Software-Requirements-Engineering/Release 1/SystemRequirements.tex
 OUTPUT SystemRequirements.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
