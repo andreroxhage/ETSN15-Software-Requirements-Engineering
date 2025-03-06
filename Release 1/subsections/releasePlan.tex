@@ -8,6 +8,8 @@ Our prioritization strategy combines Benefit-Cost Analysis and the MoSCoW priori
 \item Travel Agencies: Prioritizing B2B features, API support, and comprehensive flight information
 \end{itemize}
 
+The prioritization of stakeholders was created based on our expectations and insights gathered from stakeholder analysis. In the ReqT tool, we prioritized users first, followed by airlines, and lastly travel agencies, to ensure that the most critical needs are addressed effectively.
+
 \textbf{Priority Classification:} Independent of the benefit-cost analysis, we apply the MoSCoW prioritization technique to classify the features into four categories:
 \begin{itemize}
 \item Must-have: Essential features critical for core functionality
@@ -67,9 +69,6 @@ The implementation order is heavily influenced by technical and logical dependen
 These dependencies have been carefully considered in the release planning to ensure a logical and technically feasible implementation sequence.
 
 While features with the highest benefit and lowest cost are generally preferred, the main focus is on distributing development and testing resources efficiently to enhance productivity and accelerate time to market. Releases 4, 5, and 6 emphasize structured resource allocation to optimize feature delivery.
-
-% add dependencies, requires, and stakeholder priorities etc.
-% add col to table with another priority independent of benefit/cost release planning, e.g. priority must-have / important / nice-to-have / etc.
 
 \subsection{Release R4}
 \textbf{Benefit: 1000} \\
@@ -134,6 +133,8 @@ MultiFlightTrips & 78 & 6 & Important \\
 DateRangeSearch & 60 & 8 & Important \\
 \bottomrule
 \end{tabular}
+
+The MoSCoW prioritization decisions were driven by several key factors. Must-have features primarily focus on essential security (SecureDataEncryption), compliance (LawCompliance), and core user functionality (ShowFlights, AccountCreation) that form the foundation of the flight booking system. Important features were classified based on their significant contribution to user experience and business value, such as search capabilities (SearchCheapFlights) and pricing features (MultipleTicketPrices), which enhance the platform's competitiveness but aren't critical for basic operation. Nice-to-have features like GeolocationService and SaveFavoriteCity represent convenience enhancements that improve user experience but can be implemented later without compromising core functionality.
 
 \subsection{Release R7 - Quality Assurance}
 After release R6, a minimal viable product will be available with all core functionalities implemented. Release R7 focuses on comprehensive quality assurance, including:
