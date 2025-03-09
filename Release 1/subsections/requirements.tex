@@ -316,6 +316,7 @@ for the flight searches and the user accounts in the system.
 
 \textbf{AdProviders}: The product shall display ads from Ad Providers once every \_ minutes.
 
+\subsection*{Quality Grid Explanations}
 The following Quality Grid, \autoref{tab:quality_characteristics}, shows the quality characteristics for the system and how we have prioritized them for our application.
 \begin{table}[h]
     \centering
@@ -346,8 +347,6 @@ The following Quality Grid, \autoref{tab:quality_characteristics}, shows the qua
     \caption{Software Quality Characteristics}
     \label{tab:quality_characteristics}
 \end{table}
-
-\subsection*{Quality Grid Explanations}
 \begin{enumerate}
     \item It is critical that the system has high availability since it can be used by anyone across the world, meaning we have the potential to gain customers at any time of the day. If availability is below 99\%, the company loses money, and key stakeholders, such as airlines, are negatively impacted.
     \item If the system cannot filter or return proper search results quickly, users may grow impatient and leave for a competitor.
@@ -356,15 +355,16 @@ The following Quality Grid, \autoref{tab:quality_characteristics}, shows the qua
     \item Since the system is web-based on computer workstations, installation is unnecessary. However, for the mobile version, an app must be installed, which should be easy to download from platforms like the App Store or Google Play.
 \end{enumerate}
 
-\newpage
 \begin{figure}[h]
-    \includegraphics[width=.89\textwidth]{resources/mockup1.png}
+    \centering
+    \includegraphics[width=.8\textwidth]{resources/mockup1.png}
     \caption{User interface showing the search page, dynamic date picker and filters.}
     \label{fig:mockup1}
 \end{figure}
 
 \begin{figure}[h]
-    \includegraphics[width=.89\textwidth]{resources/mockup2.png}
+    \centering
+    \includegraphics[width=.8\textwidth]{resources/mockup2.png}
     \caption{User interface showing the search results page with a list of flights and a heatmap.}
     \label{fig:mockup2}
 \end{figure}
